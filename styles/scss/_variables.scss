@@ -1,0 +1,73 @@
+//font-family
+$system-ui: system-ui,
+"Segoe UI",
+Roboto,
+Helvetica,
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol";
+$font-family-heading: "Cruinn", #{$system-ui};
+$font-family-text: "Montserrat", #{$system-ui};
+
+//font-sizes
+$font-sizes: (
+"xl": 2.75rem,
+"large": 1.75rem,
+"medium": 1.25rem,
+"small": 1rem
+);
+
+//font-weights
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 600
+);
+
+// colors
+$colors: (
+    "primary": #ff843d,
+    "secondary":#7c9dd3,
+    "tertiary":#ffe090,
+    "base":#ffffff,
+    "form-primary":#ffe8da,
+    "form-secondary":#ffcaac
+);
+
+@font-face {
+    font-family: "Cruinn";
+    src: url("/shelter-project-frontend/assets/fonts/Cruinn-Medium.woff2") format("woff2"),
+        url("/Питомник/assets/fonts/Cruinn-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/Питомник/assets/fonts/Montserrat-Regular.woff2") format("woff2"),
+        url("/Питомник/assets/fonts/Montserrat-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/Питомник/assets/fonts/Montserrat-Medium.woff2") format("woff2"),
+        url("/Питомник/assets/fonts/Montserrat-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/Питомник/assets/fonts/Montserrat-SemiBold.woff2") format("woff2"),
+        url("/Питомник/assets/fonts/Montserrat-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
