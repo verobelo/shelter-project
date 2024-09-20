@@ -57,3 +57,10 @@
         map-get($colors, "primary")
     )
 }
+
+@mixin heading($size) {
+    font-family: #{$font-family-heading};
+    font-weight: map-get($font-weights, "regular");
+    line-height: 1.2;
+    font-size: map-get($font-sizes, $size);
+}
