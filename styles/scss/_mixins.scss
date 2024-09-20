@@ -1,0 +1,59 @@
+@use "variables" as *;
+
+@mixin flex($direction, $justify-content) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+    flex-direction: $direction;    
+}
+
+@mixin card($background, $width, $gap) {
+    @include flex();
+    border-radius: 2.8125rem;
+    color: map-get($colors, "base");
+    background-color: $background;
+    gap: $gap;
+    max-width: $width;
+}
+
+@mixin button($border-color, $text-color, $hover-shadow-color, $active-bg-color, $active-text-color) {
+    padding: 0.3rem 1.7rem;
+    font-size: map-get($font-sizes, medium);
+    font-family: #{$font-family-text};
+    font-weight: map-get($font-weights, "bold");
+    border-radius: 1rem;
+    border: 2px solid $border-color;
+    color: $text-color;
+    transition: box-shadow 0.2s;
+    background-color: transparent;
+
+    &:hover {
+        box-shadow: 1px 4px 10px 0px rgba($hover-shadow-color, 1);
+    }
+
+    &:active {
+        box-shadow: none;
+        background-color: $active-bg-color;
+        color: $active-text-color;
+    }
+}
+
+@mixin button-color {
+    @include button (
+        map-get($colors, "primary"),
+        map-get($colors, "primary"),
+        map-get($colors, "primary"),
+        map-get($colors, "primary"),
+        map-get($colors, "base")
+    )
+}
+
+@mixin button-white {
+    @include button (
+        map-get($colors, "base"),
+        map-get($colors, "base"),
+        map-get($colors, "base"),
+        map-get($colors, "base"),
+        map-get($colors, "primary")
+    )
+}
