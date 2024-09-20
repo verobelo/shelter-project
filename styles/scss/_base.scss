@@ -13,6 +13,14 @@ body {
     padding: 3.125rem 2.5rem;
 }
 
+h1 {
+    @include heading("xlarge");
+}
+
+h2 {
+    @include heading("large");
+}
+
 li[aria-current="page"] {
     font-weight: map-get($font-weights, "bold");
 }
