@@ -1,0 +1,18 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+    font-family: #{$font-family-text};
+    background-color: map-get($colors, "base");
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3.125rem 2.5rem;
+}
+
+li[aria-current="page"] {
+    font-weight: map-get($font-weights, "bold");
+}
