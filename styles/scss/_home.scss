@@ -65,26 +65,26 @@
 
 .home-happy-stories {
     &__container{
-        @include flex(column, flex-start);
-        background-color: map-get($colors, "tertiary");
-        gap: 1.875rem;
+            @include flex(column, flex-start);
+            background-color: map-get($colors, "tertiary");
+            gap: 1.875rem;
         & h1 {
             color: map-get($colors, "primary");
         }
     }
     &__card{
-        @include card(
-        map-get($colors, "primary"),
-        850px,
-        3.125rem,
-        row,
-        flex-start
+            @include card(
+            map-get($colors, "primary"),
+            850px,
+            3.125rem,
+            row,
+            flex-start
         );
         height: 25rem;
     }
     &__img{
-        flex: 1;
-        align-self: stretch;
+            flex: 1;
+            align-self: stretch;
         & img {
             border-radius: 2.1875rem;
             object-fit: cover;
@@ -94,16 +94,61 @@
              }
     }
     &__text {
-        @include flex(column, center);
-        align-items: flex-start;
-        gap: 1.875rem;
-        padding-right: 1.25rem;
+            @include flex(column, center);
+            align-items: flex-start;
+            gap: 1.875rem;
+            padding-right: 1.25rem;
         & h2 {
             color: map-get($colors, "base" );
             max-width: 23ch;
         }
         & a {
-       @include button-white;
+            @include button-white;
     }
 }
+}
+
+//News section
+
+.home-news {
+    &__container {
+            @include flex(column, flex-start);
+            gap: 1.875rem;
+            & h1 {
+                color: map-get($colors, "primary" );
+            }
+        }
+    &__card-group {
+            @include flex(row, center);
+            gap: 2.5rem;
+    }
+    &__card {
+            @include card(
+                map-get($colors, "secondary"),
+                280px,
+                1.25rem,
+                column,
+                flex-start
+            );
+            height: 23.4375rem;
+    }
+    &__img {
+            flex: 1;
+            overflow: hidden;
+            width: 100%;
+            & img {
+                border-radius: 2.1875rem;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    }
+    &__text {
+            flex: 1;
+            padding: 0 1.25rem 1.875rem 1.25rem;
+            color: map-get($colors, "base");
+            & p {
+                font-size: map-get($colors, "medium" );
+            }
+    }
 }
