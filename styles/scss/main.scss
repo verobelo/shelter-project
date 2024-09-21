@@ -1,7 +1,10 @@
-@use "_reset" as *;
+@use "reset" as *;
 
-@use "_variables" as *;
+@use "variables" as *;
 
-@use "_mixins" as *;
+@use "mixins" as *;
 
-@use "_base" as *;
+@use "base" as *;
+
+@use "header" as *;
+
