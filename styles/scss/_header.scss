@@ -1,0 +1,74 @@
+@use "variables" as *;
+
+@use "mixins" as *;
+
+@use "base" as *;
+
+.header__container {
+    background-color: map-get($colors, "base");
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.header__nav {
+    @include flex(row, space-between);
+}
+
+.header__nav-left,
+.header__nav-right {
+    @include flex(row, flex-start);
+    gap: 1.875rem;
+}
+
+.header__logo img {
+    max-width: 125px;
+    height: auto;
+    object-fit: contain;
+}
+
+.header__links ul {
+    display: flex;
+    gap: 1.875rem;
+}
+
+.header__links ul li a {
+    color: map-get($colors, "primary");
+    font-size: map-get($font-sizes, "medium");
+    font-weight: map-get($font-weights, "bold");
+}
+
+.header__links ul li a:hover {
+    text-shadow: 1px 1px 1px map-get($colors, "tertiary");
+}
+
+.header__favorites {
+    position: relative;
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.header__favorites-count {
+    color: map-get($colors, "primary");
+    font-size: map-get($font-sizes, "medium" );
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header__favorites-icon {
+    width: 100%;
+    height: 3.5rem;
+}
+
+.header__favorites:hover svg path {
+    stroke: map-get($colors, "tertiary");
+    transition: stroke 0.3s;
+}
+
+.button {
+    @include button-color;
+}
