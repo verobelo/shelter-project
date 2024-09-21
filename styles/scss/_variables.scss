@@ -8,8 +8,8 @@ sans-serif,
 "Apple Color Emoji",
 "Segoe UI Emoji",
 "Segoe UI Symbol";
-$font-family-heading: "Cruinn", #{$system-ui};
-$font-family-text: "Montserrat", #{$system-ui};
+$font-family-heading: "Cruinn", $system-ui;
+$font-family-text: "Montserrat", $system-ui;
 
 //font-sizes
 $font-sizes: (
