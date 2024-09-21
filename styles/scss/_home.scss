@@ -152,3 +152,33 @@
             }
     }
 }
+
+//Checklist section
+
+.home-checklist {
+    &__container {
+        @include flex(column, flex-start);
+        background-color: map-get($colors, "tertiary" );
+        gap: 1.875rem;
+        & h1 {
+            color: map-get($colors, "primary" );
+        }
+    }
+    &__card-group {
+        @include flex(row, center);
+        gap: 7.5rem;
+    }
+    &__card {
+        @include card (
+        transparent,
+        280px,
+        1.25rem,
+        column,
+        center
+        );
+        & h2 {
+            color: map-get($colors, "primary");
+            text-align: center;
+        }
+    }
+}
