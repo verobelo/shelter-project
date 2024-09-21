@@ -43,3 +43,21 @@
     
 }
 
+//Catalog section
+
+.home-catalog {
+    &__card-group {
+            @include flex(row, center);
+            gap: 7.5rem;
+    }
+    &__card {
+            @include card (
+            map-get($colors, "secondary"),
+            280px,
+            0px,
+            column,
+            flex-end);
+            padding: 2rem 1rem 0 1rem;
+    }
+}
+
