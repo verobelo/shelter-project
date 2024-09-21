@@ -1,0 +1,27 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "base" as *;
+
+.footer__container {
+    @include flex(column, center);
+    gap: 1.25rem;
+}
+
+.footer__logo {
+    max-width: 10rem;
+}
+
+.footer__contact {
+    @include flex(column, center);
+    gap: 0.625rem;
+    a, p {
+        font-size: map-get($font-sizes, "small" );
+        color: map-get($colors, "primary" );
+        font-style: normal;
+    }
+}
+
+.footer__social {
+    @include flex(row, center);
+    gap: 2.5rem;
+}
