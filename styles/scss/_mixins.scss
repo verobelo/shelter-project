@@ -7,13 +7,13 @@
     flex-direction: $direction;    
 }
 
-@mixin card($background, $width, $gap) {
-    @include flex();
+@mixin card($background, $width, $gap, $direction, $justify-content) {
+    @include flex($direction, $justify-content);
     border-radius: 2.8125rem;
     color: map-get($colors, "base");
     background-color: $background;
-    gap: $gap;
     max-width: $width;
+    gap: $gap;
 }
 
 @mixin button($border-color, $text-color, $hover-shadow-color, $active-bg-color, $active-text-color) {
