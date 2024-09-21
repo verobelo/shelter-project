@@ -61,3 +61,49 @@
     }
 }
 
+//Happy stories section
+
+.home-happy-stories {
+    &__container{
+        @include flex(column, flex-start);
+        background-color: map-get($colors, "tertiary");
+        gap: 1.875rem;
+        & h1 {
+            color: map-get($colors, "primary");
+        }
+    }
+    &__card{
+        @include card(
+        map-get($colors, "primary"),
+        850px,
+        3.125rem,
+        row,
+        flex-start
+        );
+        height: 25rem;
+    }
+    &__img{
+        flex: 1;
+        align-self: stretch;
+        & img {
+            border-radius: 2.1875rem;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+             }
+    }
+    &__text {
+        @include flex(column, center);
+        align-items: flex-start;
+        gap: 1.875rem;
+        padding-right: 1.25rem;
+        & h2 {
+            color: map-get($colors, "base" );
+            max-width: 23ch;
+        }
+        & a {
+       @include button-white;
+    }
+}
+}
