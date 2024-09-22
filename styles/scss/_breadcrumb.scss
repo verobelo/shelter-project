@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+@use "mixins" as *;
+
+@use "base" as *;
+
+.breadcrumb {
+    & ul {
+        @include flex(row, flex-start);
+        flex-wrap: wrap;
+        list-style: none;
+        color: map-get($colors, "base" );
+        & li {
+            margin-right: 0.5em;
+            & a {
+                color: map-get($colors, "base" );
+            }
+        }      
+   } 
+    & li:not(:last-child)::after {
+        display: inline-block;
+        content: ">";
+        margin-left: 0.5em;
+    }
+}
+
