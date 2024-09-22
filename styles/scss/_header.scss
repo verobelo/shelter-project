@@ -11,12 +11,12 @@
 }
 
 .header__nav {
-    @include flex(row, space-between);
+    @include flex(row, space-between, center);
 }
 
 .header__nav-left,
 .header__nav-right {
-    @include flex(row, flex-start);
+    @include flex(row, flex-start, center);
     gap: 1.875rem;
 }
 
