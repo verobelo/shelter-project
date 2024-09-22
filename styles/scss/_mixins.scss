@@ -1,8 +1,8 @@
 @use "variables" as *;
 
-@mixin flex($direction, $justify-content) {
+@mixin flex($direction, $justify-content, $align-items) {
     display: flex;
-    align-items: center;
+    align-items: $align-items;
     justify-content: $justify-content;
     flex-direction: $direction;    
 }
