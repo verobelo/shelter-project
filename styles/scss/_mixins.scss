@@ -7,8 +7,8 @@
     flex-direction: $direction;    
 }
 
-@mixin card($background, $width, $gap, $direction, $justify-content) {
-    @include flex($direction, $justify-content);
+@mixin card($background, $width, $gap, $direction, $justify-content, $align-items) {
+    @include flex($direction, $justify-content, $align-items);
     border-radius: 2.8125rem;
     color: map-get($colors, "base");
     background-color: $background;
