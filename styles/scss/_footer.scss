@@ -3,7 +3,7 @@
 @use "base" as *;
 
 .footer__container {
-    @include flex(column, center);
+    @include flex(column, center, center);
     gap: 1.25rem;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .footer__contact {
-    @include flex(column, center);
+    @include flex(column, center, center);
     gap: 0.625rem;
     a, p {
         font-size: map-get($font-sizes, "small" );
@@ -22,6 +22,6 @@
 }
 
 .footer__social {
-    @include flex(row, center);
+    @include flex(row, center, center);
     gap: 2.5rem;
 }
