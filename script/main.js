@@ -1,3 +1,4 @@
+// About us slider
 const slider = document.querySelector(".about-volunteers__slide-group");
 const slides = document.querySelectorAll(".about-volunteers__slide");
 const prevBtn = document.querySelector(".about-volunteers__prev-btn");
