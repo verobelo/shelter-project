@@ -47,7 +47,7 @@
 
 .home-catalog {
     &__card-group {
-            @include flex(row, center);
+            @include flex(row, center, center);
             gap: 7.5rem;
     }
     &__card {
@@ -65,7 +65,7 @@
 
 .home-happy-stories {
     &__container{
-            @include flex(column, flex-start);
+            @include flex(column, flex-start, center);
             background-color: map-get($colors, "tertiary");
             gap: 1.875rem;
         & h1 {
@@ -94,8 +94,7 @@
              }
     }
     &__text {
-            @include flex(column, center);
-            align-items: flex-start;
+            @include flex(column, center, flex-start);
             gap: 1.875rem;
             padding-right: 1.25rem;
         & h2 {
@@ -112,14 +111,14 @@
 
 .home-news {
     &__container {
-            @include flex(column, flex-start);
+            @include flex(column, flex-start, center);
             gap: 1.875rem;
             & h1 {
                 color: map-get($colors, "primary" );
             }
         }
     &__card-group {
-            @include flex(row, center);
+            @include flex(row, center, center);
             gap: 2.5rem;
     }
     &__card {
@@ -157,7 +156,7 @@
 
 .home-checklist {
     &__container {
-        @include flex(column, flex-start);
+        @include flex(column, flex-start, center);
         background-color: map-get($colors, "tertiary" );
         gap: 1.875rem;
         & h1 {
@@ -165,7 +164,7 @@
         }
     }
     &__card-group {
-        @include flex(row, center);
+        @include flex(row, center, center);
         gap: 7.5rem;
     }
     &__card {
