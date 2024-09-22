@@ -6,7 +6,7 @@
 
 .breadcrumb {
     & ul {
-        @include flex(row, flex-start);
+        @include flex(row, flex-start, center);
         flex-wrap: wrap;
         list-style: none;
         color: map-get($colors, "base" );
