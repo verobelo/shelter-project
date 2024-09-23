@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Чек-лист | Приют "У них лапки"</title>
+    <link
+      rel="icon"
+      href="/shelter-project-frontend/assets/images/home/home-logo.png"
+      type="image/png" />
+    <link
+      rel="stylesheet"
+      href="/shelter-project-frontend/styles/scss/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header__container container">
+        <nav class="header__nav" aria-label="главная навигация">
+          <div class="header__nav-left">
+            <a
+              href="/shelter-project-frontend/pages/home.html"
+              class="header__logo"
+              ><img
+                src="/shelter-project-frontend/assets/images/home/home-logo.svg"
+                alt="логотип приюта"
+                aria-label="возврат на главную страницу"
+            /></a>
+            <div class="header__links">
+              <ul>
+                <li><a href="about-us.html">О нас</a></li>
+                <li><a href="">Кошки</a></li>
+                <li><a href="">Собаки</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__nav-right">
+            <button
+              class="header__favorites"
+              aria-label="просмотреть понравившихся животных">
+              <svg
+                class="header__favorites-icon"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M34.7047 5.00194L34.7048 5.00191L34.6983 4.99827C32.4433 3.71474 29.7782 3.74902 27.1868 4.68447C24.8798 5.51722 22.5724 7.07953 20.5111 9.17794C18.4332 7.06336 16.1158 5.49918 13.8061 4.66991C11.2141 3.7393 8.55722 3.71484 6.32059 5.00036L6.32059 5.00034L6.31576 5.00315C3.51648 6.63293 2.15123 9.80947 2.01205 13.3954C1.87235 16.9946 2.9475 21.1581 5.20176 25.078C9.09421 31.8465 14.7617 35.1268 20.4844 35.01C25.7524 35.0058 31.8361 31.8745 35.7442 25.0807C38.0188 21.1776 39.1028 17.005 38.9731 13.3983C38.8441 9.8079 37.4918 6.6156 34.7047 5.00194Z"
+                  stroke="#FFE8DA"
+                  stroke-width="2" />
+              </svg>
+              <span class="header__favorites-count"></span>
+            </button>
+            <a href="" class="button">Помочь сейчас</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Main -->
+    <main>
+      <div class="checklist__container container">
+        <!-- Breadcrumb -->
+        <nav aria-label="Строка навигации" class="breadcrumb">
+          <ul>
+            <li><a href="home.html">Главная</a></li>
+            <li aria-current="page">Чек-лист усыновления</li>
+          </ul>
+        </nav>
+        <!-- Checklist-title section-->
+        <section class="checklist__title">
+          <div class="checklist__title-img">
+            <img
+              src="/shelter-project-frontend/assets/images/adoption-checklist/checklist-dog-icon.png"
+              alt="иконка головы собаки" />
+          </div>
+          <div class="checklist__title-text">
+            <h1>Чек-лист усыновления</h1>
+            <h2>
+              Незаменимое руководство для подготовки к усыновлению и обеспечению
+              успешной адаптации питомца в Вашем доме
+            </h2>
+          </div>
+        </section>
+        <section class="checklist__text">
+          <div class="checklist__text-segment">
+            <p>Оцените свою готовность:</p>
+            <ul>
+              <li>
+                Убедитесь, что у Вас достаточно времени и ресурсов для заботы о
+                питомце.
+              </li>
+              <li>Обсудите решение с членами семьи.</li>
+            </ul>
+          </div>
+          <div class="checklist__text-segment">
+            <p>Исследуйте породы и темперамент:</p>
+            <ul>
+              <li>Ознакомьтесь с разными породами и их особенностями.</li>
+              <li>
+                Подумайте, какой характер питомца подходит Вам лучше всего:
+                активный, спокойный, общительный и т.д.
+              </li>
+            </ul>
+          </div>
+          <div class="checklist__text-segment">
+            <p>Подготовьте дом:</p>
+            <ul>
+              <li>Обеспечьте безопасное пространство для нового питомца.</li>
+              <li>
+                Купите всё необходимое: миски, корм, лежанку, лоток, игрушки,
+                поводок, когтеточку и т.д.
+              </li>
+              <li>
+                Закройте доступ к опасным местам (кабели, токсичные растения и
+                т.д.)
+              </li>
+            </ul>
+          </div>
+          <div class="checklist__text-segment">
+            <p>Выберите приют:</p>
+            <ul>
+              <li>Найдите приюты в вашем районе.</li>
+              <li>Ознакомьтесь с отзывами и репутацией приюта.</li>
+            </ul>
+          </div>
+          <div class="checklist__text-segment">
+            <p>Познакомьтесь с питомцами:</p>
+            <ul>
+              <li>
+                Посетите приют и пообщайтесь с животными, чтобы выбрать
+                подходящего.
+              </li>
+              <li>
+                Поговорите с сотрудниками приюта о здоровье, поведении и
+                особенностях питомцев.
+              </li>
+            </ul>
+          </div>
+          <div class="checklist__text-segment">
+            <p>Задайте важные вопросы:</p>
+            <ul>
+              <li>
+                Уточните историю питомца: прошлые заболевания, травмы, характер
+              </li>
+              <li>
+                Узнайте о вакцинациях, стерилизации и других медицинских
+                процедурах.
+              </li>
+            </ul>
+          </div>
+          <div class="checklist__text-segment">
+            <p>Планируйте адаптацию:</p>
+            <ul>
+              <li>
+                Подготовьтесь к адаптационному периоду, который может занять
+                несколько недель.
+              </li>
+              <li>
+                Будьте готовы к возможным проблемам, связанным с поведением или
+                здоровьем.
+              </li>
+            </ul>
+          </div>
+          <div class="checklist__text-segment">
+            <p>Обратитесь к ветеринару:</p>
+            <ul>
+              <li>
+                Сразу после усыновления запишитесь на приём к ветеринару для
+                полного осмотра питомца.
+              </li>
+              <li>
+                Обсудите план питания, вакцинации и профилактики заболеваний.
+              </li>
+            </ul>
+          </div>
+          <div class="checklist__text-segment">
+            <p>Создайте распорядок дня:</p>
+            <ul>
+              <li>
+                Установите регулярное время для кормления, прогулок (для собак)
+                и игр.
+              </li>
+              <li>
+                Постепенно приучайте питомца к новым правилам и распорядку дома.
+              </li>
+            </ul>
+          </div>
+          <div class="checklist__text-segment">
+            <p>Проявите терпение и любовь:</p>
+            <ul>
+              <li>
+                Понимайте, что питомцу может потребоваться время, чтобы
+                привыкнуть к новому дому.
+              </li>
+              <li>Будьте терпеливы, дарите много любви и заботы.</li>
+            </ul>
+          </div>
+        </section>
+        <!-- Document download section -->
+        <section class="checklist__download">
+          <a href="" aria-label="скачать чеклист"
+            ><img
+              src="/shelter-project-frontend/assets/images/adoption-checklist/checklist-download-icon.png"
+              alt="иконка загрузки документа"
+          /></a>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__container container">
+        <a href="home.html"
+          ><img
+            src="/shelter-project-frontend/assets/images/home/home-logo.svg"
+            alt="логотип приюта"
+            aria-label="возврат на главную страницу"
+        /></a>
+        <address class="footer__contact">
+          <a href="">г. Сочи, Измайловская улица, 32А</a>
+          <p>
+            Пн-Вс <time datetime="10:00">10:00</time>-<time datetime="19:30"
+              >19:30</time
+            >
+          </p>
+          <p>+7(8622) 35-68-91</p>
+        </address>
+        <ul class="footer__social" aria-label="соцсети">
+          <li>
+            <a aria-label="переход на инстаграм" href=""
+              ><img
+                src="/shelter-project-frontend/assets/images/home/home-insta-icon.png"
+                alt="иконка инстаграм"
+            /></a>
+          </li>
+          <li>
+            <a aria-label="переход на телеграм" href=""
+              ><img
+                src="/shelter-project-frontend/assets/images/home/home-tele-icon.png"
+                alt="иконка телеграм"
+            /></a>
+          </li>
+          <li>
+            <a aria-label="отправить имейл" href=""
+              ><img
+                src="/shelter-project-frontend/assets/images/home/home-email-icon.png"
+                alt="иконка почта"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
