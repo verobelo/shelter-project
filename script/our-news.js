@@ -28,3 +28,28 @@ const newsData = [
     image: "/shelter-project-frontend/assets/images/our-news/news-medium-4",
   },
 ];
+
+const cardsPerPage = 2;
+let currentPage = 1;
+
+function displayNews() {
+  const newsCardGroup = document.querySelector("news__card-group");
+  newsCardGroup.innerHTML = "";
+  const startIndex = (currentPage - 1) * cardsPerPage;
+  const endIndex = Math.min(startIndex + cardsPerPage, newsData.length);
+
+  for (let i = startIndex; i < endIndex; i++) {
+    const card = document.createElement("div");
+    card.classList.add("news__card");
+    card.innerHTML = `
+            <img src="${newsData[i].image}" alt="картинка новости">
+            <h2>${newsData[i].title}</h2>
+            <div class="news__date">${newsData[i].date}</div>
+            <p>${newsData[i].content}</p>
+            
+        `;
+    newsCardGroup.appendChild(card);
+  }
+  document.querySelector("news__page-number").innerText = `Page ${currentPage}`;
+  updateButtons();
+}
