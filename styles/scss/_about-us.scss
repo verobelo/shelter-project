@@ -89,8 +89,9 @@
 //Volunteers section
 
 .about-volunteers {
-    border-bottom: 2px solid map-get($colors, "primary" );
+    
     &__container {
+        border-bottom: 2px solid map-get($colors, "primary");
         @include flex(column, flex-start,center);
         gap: 1.875rem;
         width: 100%;
