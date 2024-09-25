@@ -70,20 +70,34 @@
         @include flex(row, center, center);
         gap: 3.125rem;
         margin-top: 3.125rem;
-        & button {
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-            &:hover svg path {
+
+    & button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover svg {
+
+            path,
+            circle {
                 stroke: map-get($colors, "primary");
                 transition: stroke 0.3s;
+            }
+        }
+
+        &:disabled {
+            cursor: default;
+
+            svg {
+
+                path,
+                circle {
+                    stroke: map-get($colors, "form-primary");
                 }
-            &:hover svg circle {
-                stroke: map-get($colors, "primary");
-                transition: stroke 0.3s;
-                }
+            }
         }
     }
+}
 
     &__links {
         width: 20%;
