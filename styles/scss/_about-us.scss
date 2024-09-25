@@ -120,6 +120,13 @@
             background-color: transparent;
             cursor: pointer;
             z-index: 1;
+            &:hover svg {            
+                    path,
+                    circle {
+                        stroke: map-get($colors, "form-secondary");
+                        transition: stroke 0.2s;
+                    }
+                }
         }
     }
     &__prev-btn {
