@@ -146,11 +146,12 @@
             }
     }
     &__text {
+            @include flex(column, space-evenly, flex-start);
             flex: 1;
             padding: 0 1.25rem 1.875rem 1.25rem;
             color: map-get($colors, "base");
             & p {
-                font-size: map-get($colors, "medium" );
+                font-size: map-get($font-sizes, "small" );
             }
     }
 }
