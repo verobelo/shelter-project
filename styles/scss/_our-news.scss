@@ -1,0 +1,111 @@
+@use "variables" as *;
+
+@use "mixins" as *;
+
+@use "base" as *;
+
+@use "header" as *;
+
+@use "footer" as *;
+
+@use "breadcrumb" as *;
+
+.news {
+    &__container {
+        border-top: 2px solid map-get($colors, "primary");
+        padding: 1.875rem 8.75rem 3.125rem 8.75rem;
+        & .breadcrumb {
+        
+                & ul {
+                    & li {
+                        color: map-get($colors, "primary");
+        
+                        & a {
+                            color: map-get($colors, "primary");
+                        }
+                    }
+                }
+            }
+    }
+
+    &__card-group {
+        margin-top: 1.25rem;
+        @include flex(column, center, center);
+        gap: 5rem;
+    }
+
+    &__card {
+        @include card(
+            map-get($colors, "secondary"),
+            90%,
+            2.5rem,
+            column,
+            flex-start,
+            stretch);
+            max-height: 45rem;
+    }
+    
+    &__img {
+            overflow: hidden;
+            width: 100%;
+            border-radius: inherit;
+            @include flex(row, center, center);
+            & img {                
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    &__content {
+        @include flex(column, flex-start, stretch);
+        gap: 1.875rem;
+        padding: 0 2.5rem 2.5rem 2.5rem;
+    }
+
+    &__title {
+        @include flex(row, space-between, center);
+    }
+
+    &__pagination {
+        @include flex(row, center, center);
+        gap: 3.125rem;
+        margin-top: 3.125rem;
+        & button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            &:hover svg path {
+                stroke: map-get($colors, "primary");
+                transition: stroke 0.3s;
+                }
+            &:hover svg circle {
+                stroke: map-get($colors, "primary");
+                transition: stroke 0.3s;
+                }
+        }
+    }
+
+    &__links {
+        width: 20%;
+        @include flex(row, space-between, center);
+    }
+
+    &__page-number:not(.active) {
+        color: map-get($colors, "form-secondary");
+        }
+    &__ellipsis {
+        color: map-get($colors, "form-secondary" );
+    }
+            
+    }
+
+
+.active {
+    color: map-get($colors, "primary" );
+}
+
+
+
+
+
+
