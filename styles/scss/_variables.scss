@@ -39,7 +39,7 @@ $colors: (
 @font-face {
     font-family: "Cruinn";
     src: url("/shelter-project-frontend/assets/fonts/Cruinn-Medium.woff2") format("woff2"),
-        url("/Питомник/assets/fonts/Cruinn-Medium.woff") format("woff");
+        url("/shelter-project-frontend/assets/fonts/Cruinn-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -47,8 +47,8 @@ $colors: (
 
 @font-face {
     font-family: "Montserrat";
-    src: url("/Питомник/assets/fonts/Montserrat-Regular.woff2") format("woff2"),
-        url("/Питомник/assets/fonts/Montserrat-Regular.woff") format("woff");
+    src: url("/shelter-project-frontend/assets/fonts/Montserrat-Regular.woff2") format("woff2"),
+        url("/shelter-project-frontend/assets/fonts/Montserrat-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -56,8 +56,8 @@ $colors: (
 
 @font-face {
     font-family: "Montserrat";
-    src: url("/Питомник/assets/fonts/Montserrat-Medium.woff2") format("woff2"),
-        url("/Питомник/assets/fonts/Montserrat-Medium.woff") format("woff");
+    src: url("/shelter-project-frontend/assets/fonts/Montserrat-Medium.woff2") format("woff2"),
+        url("/shelter-project-frontend/assets/fonts/Montserrat-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -65,8 +65,8 @@ $colors: (
 
 @font-face {
     font-family: "Montserrat";
-    src: url("/Питомник/assets/fonts/Montserrat-SemiBold.woff2") format("woff2"),
-        url("/Питомник/assets/fonts/Montserrat-SemiBold.woff") format("woff");
+    src: url("/shelter-project-frontend/assets/fonts/Montserrat-SemiBold.woff2") format("woff2"),
+        url("/shelter-project-frontend/assets/fonts/Montserrat-SemiBold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
