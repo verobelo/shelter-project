@@ -13,6 +13,7 @@
 .news {
     &__container {
         border-top: 2px solid map-get($colors, "primary");
+        border-bottom: 2px solid map-get($colors, "primary");
         padding: 1.875rem 8.75rem 3.125rem 8.75rem;
         & .breadcrumb {
         
