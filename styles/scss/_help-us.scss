@@ -1,0 +1,99 @@
+@use "variables" as *;
+
+@use "mixins" as *;
+
+@use "base" as *;
+
+@use "breadcrumb" as *;
+
+.help {
+    &__container {
+        @include flex(column, flex-start, stretch);
+        gap: 1.875rem;
+        padding: 3.125rem 8.75rem;
+        background-color: map-get($colors, "secondary" );
+        & h1 {
+            color: map-get($colors, "base" );
+            max-width: 31ch;
+        }
+    }
+    &__slider-container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        overflow: visible;
+        padding: 0.3rem;
+
+        & button {
+        transition: box-shadow 0.2s;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 1;
+
+        &:hover svg {
+            path,
+            circle {
+                stroke: map-get($colors, "form-primary");
+                transition: stroke 0.2s;
+            }
+        }
+    }
+}
+&__prev-button {
+    left: -4.5rem;
+}
+
+&__next-button {
+    right: -4.5rem;
+}
+
+&__slider {
+    @include flex(row, flex-start, stretch);
+    overflow: hidden;
+    width: 100%;
+}
+
+&__slider-group {
+    @include flex(row, flex-start, stretch);
+    transition: transform 0.5s ease;
+    gap: 3rem;
+    width: 400%;
+}
+
+&__slide {
+    overflow: hidden;
+    flex: 0 0 100%; 
+    @include card(map-get($colors, "base"),
+        900px,
+        0.5rem,
+        row,
+        space-between,
+        center);
+    height: 20rem;
+    & img {
+        height: 100%;
+        width: 48%;
+        border-radius: 2.8125rem;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+&__text {
+    @include flex(column, center, flex-start);
+    padding-right: 2.5rem;
+    width: 48%;
+    gap: 1.875rem;
+    & h2, p {
+        color: map-get($colors, "primary" );
+    }
+    
+}
+
+
+    
+}
