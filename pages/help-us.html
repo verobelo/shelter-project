@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Помочь сейчас | Приют "У них лапки"</title>
+    <link
+      rel="icon"
+      href="/shelter-project-frontend/assets/images/home/home-logo.png"
+      type="image/png" />
+    <link
+      rel="stylesheet"
+      href="/shelter-project-frontend/styles/scss/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header__container container">
+        <nav class="header__nav" aria-label="главная навигация">
+          <div class="header__nav-left">
+            <a
+              href="/shelter-project-frontend/pages/home.html"
+              class="header__logo"
+              ><img
+                src="/shelter-project-frontend/assets/images/home/home-logo.svg"
+                alt="логотип приюта"
+                aria-label="возврат на главную страницу"
+            /></a>
+            <div class="header__links">
+              <ul>
+                <li><a href="about-us.html">О нас</a></li>
+                <li><a href="">Кошки</a></li>
+                <li><a href="">Собаки</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__nav-right">
+            <button
+              class="header__favorites"
+              aria-label="просмотреть понравившихся животных">
+              <svg
+                class="header__favorites-icon"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M34.7047 5.00194L34.7048 5.00191L34.6983 4.99827C32.4433 3.71474 29.7782 3.74902 27.1868 4.68447C24.8798 5.51722 22.5724 7.07953 20.5111 9.17794C18.4332 7.06336 16.1158 5.49918 13.8061 4.66991C11.2141 3.7393 8.55722 3.71484 6.32059 5.00036L6.32059 5.00034L6.31576 5.00315C3.51648 6.63293 2.15123 9.80947 2.01205 13.3954C1.87235 16.9946 2.9475 21.1581 5.20176 25.078C9.09421 31.8465 14.7617 35.1268 20.4844 35.01C25.7524 35.0058 31.8361 31.8745 35.7442 25.0807C38.0188 21.1776 39.1028 17.005 38.9731 13.3983C38.8441 9.8079 37.4918 6.6156 34.7047 5.00194Z"
+                  stroke="#FFE8DA"
+                  stroke-width="2" />
+              </svg>
+              <span class="header__favorites-count"></span>
+            </button>
+            <a href="#" class="button">Помочь сейчас</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Main -->
+    <main>
+      <div class="help__container container">
+        <!-- Breadcrumb -->
+        <nav aria-label="Строка навигации" class="breadcrumb">
+          <ul>
+            <li><a href="home.html">Главная</a></li>
+            <li aria-current="page">Помочь сейчас</li>
+          </ul>
+        </nav>
+        <h1>
+          Ваше участие очень важно для приюта. И вот как вы можете нас
+          поддержать:
+        </h1>
+        <div class="help__slider-container">
+          <button
+            class="help__prev-button"
+            aria-label="переход на предыдущий слайд">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="19" stroke="white" stroke-width="2" />
+              <path
+                d="M16.0668 19.7332L21.4001 14.3999"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round" />
+              <path
+                d="M21.3998 25.0666L16.0664 19.7332"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+          </button>
+          <!-- Help-us slider -->
+          <div class="help__slider">
+            <div class="help__slider-group">
+              <div class="help__slide">
+                <img
+                  src="../assets/images/help-us/help-medium-1.jpg"
+                  alt="женщина выгуливает собаку" />
+                <div class="help__text">
+                  <h2>Волонтёрство</h2>
+                  <p>
+                    Присоединяйтесь к числу волонтёров, чтобы лично помогать
+                    нашим лапкам. Это включает в себя уход за питомцами,
+                    прогулки с собаками, уборку клеток, кормление, а также
+                    помощь в организации мероприятий и акций.
+                  </p>
+                </div>
+              </div>
+              <div class="help__slide">
+                <img
+                  src="../assets/images/help-us/help-medium-2.jpg"
+                  alt="кот в игрушках" />
+                <div class="help__text">
+                  <h2>Сбор необходимых вещей</h2>
+                  <p>
+                    Мы нуждаемся в разнообразных предметах, таких как корма,
+                    миски, подстилки, игрушки, лекарства, ошейники, поводки,
+                    лотки и многое другое. Вы можете организовать сбор этих
+                    вещей среди друзей, коллег или соседей.
+                  </p>
+                </div>
+              </div>
+              <div class="help__slide">
+                <img
+                  src="../assets/images/help-us/help-medium-3.jpg"
+                  alt="собака в очках" />
+                <div class="help__text">
+                  <h2>Информационная поддержка</h2>
+                  <p>
+                    Помогите нам распространять информацию о животных, которым
+                    нужен новый дом. Это можно сделать через соцсети, группы в
+                    мессенджерах или на тематических форумах. Ваши усилия могут
+                    помочь найти дом для хвостиков быстрее.
+                  </p>
+                </div>
+              </div>
+
+              <div class="help__slide">
+                <img
+                  src="../assets/images/help-us/help-medium-4.jpg"
+                  alt="день рождения собаки" />
+                <div class="help__text">
+                  <h2>Организация мероприятий</h2>
+                  <p>
+                    Поддержите “У них лапки”, организовав благотворительное
+                    мероприятие или акцию для сбора средств для привлечения
+                    внимания к проблемам бездомных животных. Это могут быть
+                    ярмарки, онлайн-аукционы или благотворительные концерты.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="help__next-button"
+            aria-label="переход на следующий слайд">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="19" stroke="white" stroke-width="2" />
+              <path
+                d="M23.4001 19.7332L18.0668 14.3999"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round" />
+              <path
+                d="M18.0671 25.0666L23.4004 19.7332"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer__container container">
+        <a href="../home.html"
+          ><img
+            src="/shelter-project-frontend/assets/images/home/home-logo.svg"
+            alt="логотип приюта"
+            aria-label="возврат на главную страницу"
+        /></a>
+        <address class="footer__contact">
+          <a href="#">г. Сочи, Измайловская улица, 32А</a>
+          <p>
+            Пн-Вс <time datetime="10:00">10:00</time>-<time datetime="19:30"
+              >19:30</time
+            >
+          </p>
+          <p>+7(8622) 35-68-91</p>
+        </address>
+        <ul class="footer__social" aria-label="соцсети">
+          <li>
+            <a aria-label="переход на инстаграм" href=""
+              ><img
+                src="/shelter-project-frontend/assets/images/home/home-insta-icon.png"
+                alt="иконка инстаграм"
+            /></a>
+          </li>
+          <li>
+            <a aria-label="переход на телеграм" href=""
+              ><img
+                src="/shelter-project-frontend/assets/images/home/home-tele-icon.png"
+                alt="иконка телеграм"
+            /></a>
+          </li>
+          <li>
+            <a aria-label="отправить имейл" href=""
+              ><img
+                src="/shelter-project-frontend/assets/images/home/home-email-icon.png"
+                alt="иконка почта"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../script/help-us.js"></script>
+  </body>
+</html>
