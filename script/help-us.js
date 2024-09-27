@@ -9,6 +9,22 @@ const slidesToShow = 1;
 const slideWidth = slides[0].getBoundingClientRect().width;
 const slideGap = 48;
 
+function updateBtnVisibility() {
+  if (currentIndex === 0) {
+    prevBtn.style.display = "none";
+  } else {
+    prevBtn.style.display = "block";
+  }
+
+  if (currentIndex === totalSlides - 1) {
+    nextBtn.style.display = "none";
+  } else {
+    nextBtn.style.display = "block";
+  }
+}
+
+updateBtnVisibility();
+
 nextBtn.addEventListener("click", () => {
   if (currentIndex < totalSlides - slidesToShow) {
     currentIndex++;
@@ -16,6 +32,7 @@ nextBtn.addEventListener("click", () => {
       (slideWidth + slideGap) * currentIndex
     }px)`;
   }
+  updateBtnVisibility();
 });
 
 prevBtn.addEventListener("click", () => {
@@ -25,6 +42,7 @@ prevBtn.addEventListener("click", () => {
       (slideWidth + slideGap) * currentIndex
     }px)`;
   }
+  updateBtnVisibility();
 });
 
 window.addEventListener("resize", () => {
