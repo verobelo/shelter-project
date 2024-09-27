@@ -8,8 +8,7 @@ const happyStoriesData = [
     link: "/shelter-project-frontend/pages/happy-stories/story-details.html",
   },
   {
-    image:
-      "/shelter-project-frontend/assets/images/happy-stories/happy-medium-2.jpg",
+    image: "/tinified/happy-1200-2.jpg",
     title: "Неслучайные случайности или история блудного кота Мура",
     button: "Подробнее",
     link: "",
