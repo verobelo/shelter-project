@@ -2,7 +2,7 @@
 const happyStoriesData = [
   {
     image:
-      "/shelter-project-frontend/assets/images/happy-stories/happy-medium-1.jpg",
+      "/shelter-project-frontend/assets/images/happy-stories/happy-1200-1.jpg",
     title: "Он не был баловнем судьбы до одного счастливого вторника",
     button: "Подробнее",
     link: "/shelter-project-frontend/pages/happy-stories/story-details.html",
@@ -16,42 +16,42 @@ const happyStoriesData = [
   },
   {
     image:
-      "/shelter-project-frontend/assets/images/happy-stories/happy-medium-3.jpg",
+      "/shelter-project-frontend/assets/images/happy-stories/happy-1200-3.jpg",
     title: "Весёлая история Пегаса, который держал хвост пистолетом",
     button: "Подробнее",
     link: "",
   },
   {
     image:
-      "/shelter-project-frontend/assets/images/happy-stories/happy-medium-4.jpg",
+      "/shelter-project-frontend/assets/images/happy-stories/happy-1200-4.jpg",
     title: "Ушко на макушке или как кот Степан нашёл свой родной дом",
     button: "Подробнее",
     link: "",
   },
   {
     image:
-      "/shelter-project-frontend/assets/images/happy-stories/happy-medium-5.jpg",
+      "/shelter-project-frontend/assets/images/happy-stories/happy-1200-5.jpg",
     title: "“В гостях хорошо, а дома лучше!”- невероятное приключение Спайка",
     button: "Подробнее",
     link: "",
   },
   {
     image:
-      "/shelter-project-frontend/assets/images/happy-stories/happy-medium-6.jpg",
+      "/shelter-project-frontend/assets/images/happy-stories/happy-1200-6.jpg",
     title: "Пёс Блэк, который обрёл дом и научился снова доверять людям",
     button: "Подробнее",
     link: "",
   },
   {
     image:
-      "/shelter-project-frontend/assets/images/happy-stories/happy-medium-7.jpg",
+      "/shelter-project-frontend/assets/images/happy-stories/happy-1200-7.jpg",
     title: "Путь к уюту: Как Мурзик из приюта стал хозяином дивана",
     button: "Подробнее",
     link: "",
   },
   {
     image:
-      "/shelter-project-frontend/assets/images/happy-stories/happy-medium-8.jpg",
+      "/shelter-project-frontend/assets/images/happy-stories/happy-1200-8.jpg",
     title: "Барон и его хвостатое королевство: Жизнь пса после приюта",
     button: "Подробнее",
     link: "",
