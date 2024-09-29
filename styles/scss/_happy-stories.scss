@@ -105,6 +105,10 @@
     &__links {
     width: 20%;
     @include flex(row, space-between, center);
+    cursor: pointer;
+        & span:hover {
+            color: map-get($colors, "primary" );
+        }
 }
 
     &__page-number:not(.active) {
