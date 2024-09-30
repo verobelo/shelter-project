@@ -813,6 +813,10 @@ li[aria-current=page] {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  cursor: pointer;
+}
+.news__links span:hover {
+  color: #ff843d;
 }
 .news__page-number:not(.active) {
   color: #ffcaac;
@@ -926,6 +930,10 @@ li[aria-current=page] {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  cursor: pointer;
+}
+.happy-stories__links span:hover {
+  color: #ff843d;
 }
 .happy-stories__page-number:not(.active) {
   color: #ffcaac;
@@ -1154,18 +1162,18 @@ li[aria-current=page] {
 }
 .catalog__title-img {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: row;
 }
-.catalog__title-img .img-left, .catalog__title-img .img-right {
-  margin-bottom: -2.5rem;
-}
 .catalog__title-img .img-left {
-  margin-right: -3.125rem;
+  margin-right: -3rem;
 }
-.catalog__title-img .img-right {
-  margin-left: -3.125rem;
+.catalog__title-img .img-right:not(.cat) {
+  margin-left: -1.5rem;
+}
+.catalog__title-img .img-right.cat {
+  margin-left: -4rem;
 }
 .catalog__wrapper {
   display: grid;
@@ -1187,4 +1195,151 @@ li[aria-current=page] {
   background-color: #ff843d;
   max-width: 770px;
   gap: 2.1875rem;
+  max-height: 11.875rem;
+  overflow: hidden;
+}
+.catalog__card:hover {
+  box-shadow: 0px 4px 20px 0px rgb(255, 132, 61);
+}
+.catalog__card img {
+  height: 100%;
+  width: 48%;
+  border-radius: 2.8125rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.catalog__text {
+  /*@include flex(column, center, flex-start);*/
+  width: 48%;
+  padding-right: 2.1875rem;
+}
+.catalog__name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.catalog__gender {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0.3125rem;
+  margin-bottom: 1rem;
+}
+.catalog__description {
+  font-size: 1.25rem;
+}
+.catalog__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3.125rem;
+  margin-top: 3.125rem;
+  grid-area: 2/2/3/3;
+}
+.catalog__pagination button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.catalog__pagination button:hover svg path,
+.catalog__pagination button:hover svg circle {
+  stroke: #ff843d;
+  transition: stroke 0.3s;
+}
+.catalog__pagination button:disabled {
+  cursor: default;
+}
+.catalog__pagination button:disabled svg path,
+.catalog__pagination button:disabled svg circle {
+  stroke: #ffe8da;
+}
+.catalog__links {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.catalog__page-number:not(.active) {
+  color: #ffcaac;
+}
+.catalog__ellipsis {
+  color: #ffcaac;
+}
+.catalog__filters-container {
+  display: inline-block;
+}
+.catalog__filters-container ul {
+  margin-bottom: 1.25rem;
+}
+.catalog__filter-name {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #ff843d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 3.375rem;
+}
+.catalog__filter-name.active {
+  color: #ff843d;
+}
+.catalog__filter-name.active::after {
+  transform: rotate(90deg);
+}
+.catalog__filter-name::after {
+  content: url(/shelter-project-frontend/assets/images/cat-catalog/catalog-filter-hevron.svg);
+  transition: transform 0.2s ease;
+}
+.catalog__filter-options li {
+  display: none;
+  padding: 0.2rem;
+  color: #ff843d;
+}
+.catalog__filter-options li input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #ff843d;
+  position: relative;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.catalog__filter-options li input[type=checkbox]::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.catalog__filter-options li input[type=checkbox]:checked::before {
+  background-color: #ff843d;
+}
+.catalog__filter-options li input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  -webkit-clip-path: polygon(14% 44%, 0% 0%, 45% 58%, 100% 0%, 100% 18%, 47% 100%);
+          clip-path: polygon(14% 44%, 0% 0%, 45% 58%, 100% 0%, 100% 18%, 47% 100%);
+  background-color: #ffffff;
+}
+.catalog__filter-options.visible li {
+  display: block;
+}
+.catalog__filter-options.visible li {
+  display: block;
 }
