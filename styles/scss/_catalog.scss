@@ -34,17 +34,16 @@
     }
   }
   &__title-img {
-    @include flex(row, center, center);
-        & .img-left, .img-right {
-            margin-bottom: -2.5rem;
-        }
-        & .img-left {
-            margin-right: -3.125rem;
-        }
-        & .img-right {
-            margin-left: -3.125rem;
-        }
-        
+    @include flex(row, center, flex-end);
+      & .img-left{
+        margin-right: -3rem;
+      }
+      & .img-right:not(.cat) {
+        margin-left: -1.5rem;
+      }
+      & .img-right.cat {
+        margin-left: -4rem;
+      }
   }
   &__wrapper {
     display: grid;
@@ -99,6 +98,7 @@
       @include flex(row, center, center);
       gap: 3.125rem;
       margin-top: 3.125rem;
+      grid-area: 2 / 2 / 3 / 3;
   
       & button {
         border: none;
