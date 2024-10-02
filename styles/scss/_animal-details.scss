@@ -6,6 +6,7 @@
 
 @use "breadcrumb" as *;
 
+
 .infosheet {
     &__container {
         border-top: 2px solid map-get($colors, "primary");
@@ -74,6 +75,10 @@
         background-color: transparent;
         cursor: pointer;
         padding: 0;
+        &:hover svg path {
+                stroke: map-get($colors, "tertiary");
+                transition: stroke 0.3s;
+            }
     }
     &__animal-gender {
         margin-top: -1rem;

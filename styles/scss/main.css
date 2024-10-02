@@ -1432,6 +1432,10 @@ li[aria-current=page] {
   cursor: pointer;
   padding: 0;
 }
+.infosheet__favorites:hover svg path {
+  stroke: #ffe090;
+  transition: stroke 0.3s;
+}
 .infosheet__animal-gender {
   margin-top: -1rem;
 }
