@@ -1343,3 +1343,206 @@ li[aria-current=page] {
 .catalog__filter-options.visible li {
   display: block;
 }
+
+.infosheet__container {
+  border-top: 2px solid #ff843d;
+  border-bottom: 2px solid #ff843d;
+  padding: 1.875rem 8.75rem 3.125rem;
+}
+.infosheet__container .breadcrumb ul li {
+  color: #ff843d;
+}
+.infosheet__container .breadcrumb ul li a {
+  color: #ff843d;
+}
+.infosheet__button {
+  padding: 0.3rem 1.7rem;
+  font-size: 1.25rem;
+  font-family: Montserrat, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-weight: 600;
+  border-radius: 1rem;
+  border: 2px solid #ff843d;
+  color: #ff843d;
+  transition: box-shadow 0.2s;
+  background-color: transparent;
+  margin-right: -2.5rem;
+}
+.infosheet__button:hover {
+  box-shadow: 1px 4px 10px 0px #ff843d;
+}
+.infosheet__button:active {
+  box-shadow: none;
+  background-color: #ff843d;
+  color: #ffffff;
+}
+.infosheet__animal-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+.infosheet__animal-card-container a {
+  align-self: flex-end;
+}
+.infosheet__animal-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 2.8125rem;
+  color: #ffffff;
+  background-color: #ff843d;
+  max-width: 920px;
+  gap: 0;
+  min-width: 920px;
+  height: 20rem;
+  overflow: hidden;
+}
+.infosheet__img {
+  width: 48%;
+  height: 100%;
+  border-radius: 2.8125rem;
+}
+.infosheet__img img {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.infosheet__animal-description {
+  width: 48%;
+  padding: 1.875rem 2.1875rem 1.875rem 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.infosheet__animal-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.infosheet__favorites {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+.infosheet__animal-gender {
+  margin-top: -1rem;
+}
+.infosheet__animal-gender p span {
+  margin-right: 0.5rem;
+}
+.infosheet__highlights p span {
+  content: url(/shelter-project-frontend/assets/images/cat-details/cat-paw-1200.svg);
+  margin-right: 0.5rem;
+}
+.infosheet__animal-story {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 2.8125rem;
+  color: #ffffff;
+  background-color: #7c9dd3;
+  max-width: 920px;
+  gap: 1.25rem;
+  color: #ffffff;
+  /*height: 29rem;*/
+}
+
+.glide__slide {
+  position: relative;
+  overflow: visible;
+}
+.glide__slide img {
+  position: relative;
+  min-width: 20rem;
+  height: 13.75rem;
+  border-radius: 2.8125rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(100%);
+}
+.glide__slide img:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
+}
+.glide__slide img.zoom {
+  transform: scale(1.5);
+  filter: grayscale(0%);
+  border: 1px solid transparent;
+  z-index: 999;
+}
+.glide__arrow {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.glide__arrow:hover svg path,
+.glide__arrow:hover svg circle {
+  stroke: #ffcaac;
+  transition: stroke 0.2s;
+}
+
+/*&__gallery-container {
+        position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            overflow: visible;
+            padding: 0.3rem;
+
+            & button {
+                transition: box-shadow 0.2s;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                z-index: 1;
+
+                &:hover svg {
+
+                    path,
+                    circle {
+                        stroke: map-get($colors, "form-secondary");
+                        transition: stroke 0.2s;
+                    }
+                }
+            }
+        }
+
+        &__prev-btn {
+            left: -4.5rem;
+        }
+
+        &__next-btn {
+            right: -4.5rem;
+        }
+        &__gallery-slider {
+            @include flex(row, flex-start, stretch);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        &__gallery-slider-group {
+            @include flex(row, flex-start, stretch);
+            transition: transform 0.5s ease;
+            gap: 3rem;
+            & img {
+                @include card(map-get($colors, "secondary"),
+                440px,
+                0.5rem,
+                column,
+                flex-start,
+                center);
+                height: 13.75rem;
+            }
+        }*/
