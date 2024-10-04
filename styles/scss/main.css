@@ -1494,59 +1494,136 @@ li[aria-current=page] {
   transition: stroke 0.2s;
 }
 
-/*&__gallery-container {
-        position: relative;
-            width: 100%;
-            max-width: 1000px;
-            margin: auto;
-            overflow: visible;
-            padding: 0.3rem;
+.form__dialog {
+  padding-top: 2.5rem;
+  background-color: #ffe8da;
+  border-radius: 2.8125rem;
+  color: #ff843d;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 880px;
+  width: 100%;
+  z-index: 1000;
+}
+.form__dialog-content h1,
+.form__dialog-content p {
+  text-align: center;
+}
+.form__dialog-content p {
+  font-size: 1rem;
+}
+.form__form label {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.form__form label input:not([type=checkbox]) {
+  width: 100%;
+  border-radius: 1.25rem;
+  padding: 1rem;
+  border: 2px solid transparent;
+  color: #ff843d;
+}
+.form__form label input:not([type=checkbox]):hover {
+  border: 2px dotted #ffcaac;
+}
+.form__form label input:not([type=checkbox]):focus, .form__form label input:not([type=checkbox]):focus-visible {
+  border: 2px solid #ff843d;
+  outline: none;
+}
+.form__form label input:not([type=checkbox])::-moz-placeholder {
+  color: #ffcaac;
+}
+.form__form label input:not([type=checkbox])::placeholder {
+  color: #ffcaac;
+}
+.form__form label input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #ff843d;
+  position: relative;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.form__form label input[type=checkbox]::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.form__form label input[type=checkbox]:checked::before {
+  background-color: #ff843d;
+}
+.form__form label input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  -webkit-clip-path: polygon(14% 44%, 0% 0%, 45% 58%, 100% 0%, 100% 18%, 47% 100%);
+          clip-path: polygon(14% 44%, 0% 0%, 45% 58%, 100% 0%, 100% 18%, 47% 100%);
+  background-color: #ffffff;
+}
+.form__form #required-description {
+  text-align: start;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+.form__form button {
+  padding: 0.3rem 1.7rem;
+  font-size: 1.25rem;
+  font-family: Montserrat, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-weight: 600;
+  border-radius: 1rem;
+  border: 2px solid #ff843d;
+  color: #ff843d;
+  transition: box-shadow 0.2s;
+  background-color: transparent;
+  display: block;
+  margin: 0 auto;
+}
+.form__form button:hover {
+  box-shadow: 1px 4px 10px 0px #ff843d;
+}
+.form__form button:active {
+  box-shadow: none;
+  background-color: #ff843d;
+  color: #ffffff;
+}
 
-            & button {
-                transition: box-shadow 0.2s;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                border: none;
-                background-color: transparent;
-                cursor: pointer;
-                z-index: 1;
+.close-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
 
-                &:hover svg {
-
-                    path,
-                    circle {
-                        stroke: map-get($colors, "form-secondary");
-                        transition: stroke 0.2s;
-                    }
-                }
-            }
-        }
-
-        &__prev-btn {
-            left: -4.5rem;
-        }
-
-        &__next-btn {
-            right: -4.5rem;
-        }
-        &__gallery-slider {
-            @include flex(row, flex-start, stretch);
-            overflow: hidden;
-            width: 100%;
-        }
-
-        &__gallery-slider-group {
-            @include flex(row, flex-start, stretch);
-            transition: transform 0.5s ease;
-            gap: 3rem;
-            & img {
-                @include card(map-get($colors, "secondary"),
-                440px,
-                0.5rem,
-                column,
-                flex-start,
-                center);
-                height: 13.75rem;
-            }
-        }*/
+.confirmation-dialog {
+  padding-top: 2.5rem;
+  background-color: #ffe8da;
+  border-radius: 2.8125rem;
+  color: #ff843d;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 880px;
+  width: 100%;
+  max-width: 630px;
+  z-index: 1000;
+}
+.confirmation-dialog h1, .confirmation-dialog h2 {
+  text-align: center;
+}
