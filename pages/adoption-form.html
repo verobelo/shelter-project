@@ -4,20 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Оформить заявку</title>
+    <link
+      rel="icon"
+      href="/shelter-project-frontend/assets/images/home/home-logo.png"
+      type="image/png" />
     <link rel="stylesheet" href="../styles/scss/main.css" />
   </head>
   <body>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
     <!-- Form dialog-->
     <div class="form__dialog container" id="dialog">
       <div class="form__dialog-content">
-        <button class="close-btn" aria-label="закрыть заявку">
+        <button
+          class="close-btn"
+          id="form-close-btn"
+          aria-label="закрыть заявку">
           <img
             src="/shelter-project-frontend/assets/images/adoption-form/form-close.png"
             alt="иконка крестика" />
         </button>
         <h1>Оформление заявки</h1>
         <p>Заполните анкету, и мы с Вами свяжемся в течение 20 минут</p>
-        <form action="" class="form__form" id="form" method="post">
+        <form action="" class="form__form" id="form" method="post" novalidate>
           <label for="fname"
             >Имя <span class="required">*</span
             ><input
@@ -31,8 +40,10 @@
               maxlength="50"
               autocomplete="on"
               placeholder="Петр"
-              required /></label
-          ><label for="lname"
+              required />
+          </label>
+          <span class="error" aria-live="polite"></span>
+          <label for="lname"
             >Фамилия <span class="required">*</span
             ><input
               aria-describedby="required-description"
@@ -46,7 +57,8 @@
               autocomplete="on"
               placeholder="Петров"
               required /></label
-          ><label for="tel"
+          ><span class="error" aria-live="polite"></span>
+          <label for="tel"
             >Телефон <span class="required">*</span
             ><input
               aria-describedby="required-description"
@@ -55,18 +67,23 @@
               name="user-tel"
               placeholder="+79999999999"
               autocomplete="on"
-              pattern="^\\+[0-9]+$"
-              maxlength="16" /></label
-          ><label for="email"
+              pattern="^\+[0-9]+$"
+              maxlength="16"
+              required
+          /></label>
+          <span class="error" aria-live="polite"></span>
+          <label for="email"
             >Email <span class="required">*</span
             ><input
               aria-describedby="required-description"
               type="email"
               id="email"
               name="user-email"
+              required
               placeholder="petr.petrov@mail.ru"
-              pattern="^[a-zA-Z0-9](?!.*[._-]{2})[a-zA-Z0-9._-]*[a-zA-Z0-9]@[a-zA-Z]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$"
+              pattern="^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$"
           /></label>
+          <span class="error" aria-live="polite"></span>
           <p aria-hidden="true" id="required-description">
             <span class="required">*</span> Обязательное для заполнения поле
           </p>
@@ -87,7 +104,10 @@
     </div>
     <!-- Confirmation dialog -->
     <div class="confirmation-dialog container" id="confirmation">
-      <button class="close-btn" aria-label="закрыть заявку">
+      <button
+        class="close-btn"
+        id="confirmation-close-btn"
+        aria-label="закрыть заявку">
         <img
           src="/shelter-project-frontend/assets/images/adoption-form/form-close.png"
           alt="иконка крестика" />
@@ -98,5 +118,6 @@
         минут.
       </h2>
     </div>
+    <script src="/shelter-project-frontend/script/form.js"></script>
   </body>
 </html>
