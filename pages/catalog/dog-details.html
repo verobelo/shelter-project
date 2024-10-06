@@ -72,11 +72,123 @@
             <li aria-current="page">Майк</li>
           </ul>
         </nav>
+        <!-- Overlay -->
+        <div id="overlay" class="overlay"></div>
+        <!-- Form dialog-->
+        <div class="form__dialog container" id="dialog">
+          <div class="form__dialog-content">
+            <button
+              class="close-btn"
+              id="form-close-btn"
+              aria-label="закрыть заявку">
+              <img
+                src="/shelter-project-frontend/assets/images/adoption-form/form-close.png"
+                alt="иконка крестика" />
+            </button>
+            <h1>Оформление заявки</h1>
+            <p>Заполните анкету, и мы с Вами свяжемся в течение 20 минут</p>
+            <form
+              action=""
+              class="form__form"
+              id="form"
+              method="post"
+              novalidate>
+              <label for="fname"
+                >Имя <span class="required">*</span
+                ><input
+                  aria-describedby="required-description"
+                  type="text"
+                  id="fname"
+                  name="user-fname"
+                  value=""
+                  pattern="^[а-яА-ЯёЁ \-]+$"
+                  minlength="2"
+                  maxlength="50"
+                  autocomplete="on"
+                  placeholder="Петр"
+                  required />
+              </label>
+              <span class="error" aria-live="polite"></span>
+              <label for="lname"
+                >Фамилия <span class="required">*</span
+                ><input
+                  aria-describedby="required-description"
+                  type="text"
+                  id="lname"
+                  name="user-lname"
+                  pattern="^[а-яА-ЯёЁ \-]+$"
+                  minlength="2"
+                  maxlength="50"
+                  value=""
+                  autocomplete="on"
+                  placeholder="Петров"
+                  required /></label
+              ><span class="error" aria-live="polite"></span>
+              <label for="tel"
+                >Телефон <span class="required">*</span
+                ><input
+                  aria-describedby="required-description"
+                  type="tel"
+                  id="tel"
+                  name="user-tel"
+                  placeholder="+79999999999"
+                  autocomplete="on"
+                  pattern="^\+[0-9]+$"
+                  maxlength="16"
+                  required
+              /></label>
+              <span class="error" aria-live="polite"></span>
+              <label for="email"
+                >Email <span class="required">*</span
+                ><input
+                  aria-describedby="required-description"
+                  type="email"
+                  id="email"
+                  name="user-email"
+                  required
+                  placeholder="petr.petrov@mail.ru"
+                  pattern="^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$"
+              /></label>
+              <span class="error" aria-live="polite"></span>
+              <p aria-hidden="true" id="required-description">
+                <span class="required">*</span> Обязательное для заполнения поле
+              </p>
+              <label for="personal-info"
+                ><input type="checkbox" id="personal-info" required />Нажимая на
+                кнопку “Оформить заявку”, я даю согласие на обработку
+                персональных данных (т.к. сайт работает в тестовом режиме, то
+                персональные данные не обрабатываются).</label
+              >
+              <span class="error" aria-live="polite"></span>
+              <label for="booking-conditions"
+                ><input type="checkbox" id="booking-conditions" required />Я
+                понимаю и соглашаюсь с тем, что бронь активна в течение 72
+                часов. Если менеджеру не удалось связаться со мной в течение
+                этого времени, бронь снимается. </label
+              ><span class="error" aria-live="polite"></span>
+              <button type="submit">Оформить заявку</button>
+            </form>
+          </div>
+        </div>
+        <!-- Confirmation dialog -->
+        <div class="confirmation-dialog container" id="confirmation">
+          <button
+            class="close-btn"
+            id="confirmation-close-btn"
+            aria-label="закрыть заявку">
+            <img
+              src="/shelter-project-frontend/assets/images/adoption-form/form-close.png"
+              alt="иконка крестика" />
+          </button>
+          <h1>Спасибо!</h1>
+          <h2>
+            Ваша заявка успешно отправлена. Наш менеджер перезвонит Вам в
+            течение 20 минут.
+          </h2>
+        </div>
         <!-- Animal card -->
         <div class="infosheet__animal-card-container container">
-          <a href="../adoption-form.html" class="infosheet__button"
-            >Оформить заявку</a
-          >
+          <button class="infosheet__button">Оформить заявку</button>
           <div class="infosheet__animal-card">
             <div class="infosheet__img">
               <img
@@ -106,7 +218,7 @@
               <div class="infosheet__animal-gender">
                 <p><span>&#9794;</span>Мальчик</p>
               </div>
-              <h2></h2>
+              <h2>Озорной пёс, который не знает устали</h2>
               <div class="infosheet__highlights">
                 <p><span></span>Вакцинирован</p>
                 <p><span></span>Кастрирован</p>
@@ -297,5 +409,6 @@
       }).mount();
     </script>
     <script src="/shelter-project-frontend/script/animal-details.js"></script>
+    <script src="/shelter-project-frontend/script/form.js"></script>
   </body>
 </html>
