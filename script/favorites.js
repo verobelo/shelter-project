@@ -17,8 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelector(".header__favorites").addEventListener("click", () => {
-    favoritesDropdown.classList.toggle("show");
-    displayFavorites();
+    if (favorites.length > 0) {
+      favoritesDropdown.classList.toggle("show");
+      displayFavorites();
+    }
   });
 
   function addAnimalToFavorites(animal) {
@@ -28,7 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateFavoritesCount() {
-    favoritesCount.textContent = favorites.length;
+    if (favorites.length === 0) {
+      favoritesCount.textContent = "";
+    } else {
+      favoritesCount.textContent = favorites.length;
+    }
   }
 
   function displayFavorites() {
