@@ -81,7 +81,10 @@ fetch("http://localhost:8080/api/pets/cats")
   .then((response) => response.json())
   .then((data) => {
     const catalog = document.getElementById("catalog");
+    let catalogHTML = "";
     data.forEach((cat) => {
+      const genderSymbol = cat.gender === "Мальчик" ? "&#9794;" : "&#9792;";
+
       const card = `
         <div class="catalog__card">
           <img src="${cat.image}" alt="${cat.name}">
@@ -101,13 +104,14 @@ fetch("http://localhost:8080/api/pets/cats")
                   stroke-width="2" />
               </svg>
           </button>
-          <div class="catalog__gender"><span></span>${cat.gender}</div>
+          <div class="catalog__gender"><span>${genderSymbol}</span>${cat.gender}</div>
           <p>${cat.description}</p>
           </div>       
         </div>
       `;
-      catalog.innerHTML += card;
+      catalogHTML += card;
       console.log("Full cat data:", cat);
     });
+    catalog.innerHTML += card;
   })
   .catch((error) => console.error("Error fetching data:", error));
