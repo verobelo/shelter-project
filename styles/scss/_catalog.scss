@@ -89,6 +89,7 @@
     @include flex(row, flex-start, center);
     gap: 0.3125rem;
     margin-bottom: 1rem;
+    font-size: map-get($font-sizes, "small");
   }
   &__description {
     font-size: map-get($font-sizes, "medium");
