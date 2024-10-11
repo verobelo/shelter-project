@@ -89,7 +89,8 @@ fetch("http://localhost:8080/api/pets/cats")
         <div class="catalog__card">
           <img src="${cat.image}" alt="${cat.name}">
           <div class="catalog__text">
-          <div class="catalog__name">${cat.name}</div>
+          <div class="catalog__name">
+          <h1>${cat.name}</h1>
           <button class="infosheet__favorites">
           <svg
                 class="header__favorites-icon"
@@ -104,14 +105,15 @@ fetch("http://localhost:8080/api/pets/cats")
                   stroke-width="2" />
               </svg>
           </button>
-          <div class="catalog__gender"><span>${genderSymbol}</span>${cat.gender}</div>
-          <p>${cat.description}</p>
+          </div>          
+          <div class="catalog__gender"><span>${genderSymbol}</span><p>${cat.gender}</p></div>
+          <div class="catalog__description><p>${cat.description}</p></div>
           </div>       
         </div>
       `;
       catalogHTML += card;
       console.log("Full cat data:", cat);
     });
-    catalog.innerHTML += card;
+    catalog.innerHTML = catalogHTML;
   })
   .catch((error) => console.error("Error fetching data:", error));
