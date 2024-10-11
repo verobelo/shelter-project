@@ -74,3 +74,12 @@ filterNames.forEach((name, index) => {
     filters[index].classList.toggle("visible");
   });
 });
+
+// Fetch
+
+fetch("http://localhost:8080/api/pets/cats")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => console.error("Error fetching data:", error));
