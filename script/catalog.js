@@ -80,6 +80,34 @@ filterNames.forEach((name, index) => {
 fetch("http://localhost:8080/api/pets/cats")
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
+    const catalog = document.getElementById("catalog");
+    data.forEach((cat) => {
+      const card = `
+        <div class="catalog__card">
+          <img src="${cat.image}" alt="${cat.name}">
+          <div class="catalog__text">
+          <div class="catalog__name">${cat.name}</div>
+          <button class="infosheet__favorites">
+          <svg
+                class="header__favorites-icon"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M34.7047 5.00194L34.7048 5.00191L34.6983 4.99827C32.4433 3.71474 29.7782 3.74902 27.1868 4.68447C24.8798 5.51722 22.5724 7.07953 20.5111 9.17794C18.4332 7.06336 16.1158 5.49918 13.8061 4.66991C11.2141 3.7393 8.55722 3.71484 6.32059 5.00036L6.32059 5.00034L6.31576 5.00315C3.51648 6.63293 2.15123 9.80947 2.01205 13.3954C1.87235 16.9946 2.9475 21.1581 5.20176 25.078C9.09421 31.8465 14.7617 35.1268 20.4844 35.01C25.7524 35.0058 31.8361 31.8745 35.7442 25.0807C38.0188 21.1776 39.1028 17.005 38.9731 13.3983C38.8441 9.8079 37.4918 6.6156 34.7047 5.00194Z"
+                  stroke="#FFE8DA"
+                  stroke-width="2" />
+              </svg>
+          </button>
+          <div class="catalog__gender"><span></span>${cat.gender}</div>
+          <p>${cat.description}</p>
+          </div>       
+        </div>
+      `;
+      catalog.innerHTML += card;
+      console.log("Full cat data:", cat);
+    });
   })
   .catch((error) => console.error("Error fetching data:", error));
