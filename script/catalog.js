@@ -87,7 +87,7 @@ fetch("http://localhost:8080/api/pets/cats")
 
       const card = `
         <div class="catalog__card">
-          <img src="${cat.image}" alt="${cat.name}">
+          <img src="${cat.pathToAvatar}" alt="${cat.name}">
           <div class="catalog__text">
           <div class="catalog__name">
           <h1>${cat.name}</h1>
