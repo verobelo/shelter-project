@@ -84,9 +84,10 @@ fetch("http://localhost:8080/api/pets/cats")
     let catalogHTML = "";
     data.forEach((cat) => {
       const genderSymbol = cat.gender === "Мальчик" ? "&#9794;" : "&#9792;";
+      const catDetails = `${cat.id}-cat-details.html`;
 
       const card = `
-        <div class="catalog__card">
+        <a class="catalog__card" href="../pages/catalog/${catDetails}">
           <img src="${cat.pathToAvatar}" alt="${cat.name}">
           <div class="catalog__text">
           <div class="catalog__name">
@@ -109,7 +110,7 @@ fetch("http://localhost:8080/api/pets/cats")
           <div class="catalog__gender"><span>${genderSymbol}</span><p>${cat.gender}</p></div>
           <div class="catalog__description><p>${cat.description}</p></div>
           </div>       
-        </div>
+        </a>
       `;
       catalogHTML += card;
       console.log("Full cat data:", cat);
