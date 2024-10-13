@@ -128,13 +128,11 @@
             <label for="email"
               >Email <span class="required">*</span
               ><input
-                aria-describedby="required-description"
                 type="email"
                 id="email"
-                name="user-email"
+                name="email"
+                pattern="^[a-zA-Z0-9._%\+\-]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,}$"
                 required
-                placeholder="petr.petrov@mail.ru"
-                pattern="^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$"
             /></label>
             <span class="error" aria-live="polite"></span>
             <p aria-hidden="true" id="required-description">
