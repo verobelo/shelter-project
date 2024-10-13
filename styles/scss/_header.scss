@@ -51,9 +51,18 @@
       transition: stroke 0.3s;
     }
   }
+  &__favorites.filled {
+    & svg {
+      fill: map-get($colors, "tertiary");
+    }
+    & svg path {
+      stroke: map-get($colors, "tertiary");
+    }
+  }
   &__favorites-count {
     color: map-get($colors, "primary");
     font-size: map-get($font-sizes, "medium");
+    font-weight: map-get($font-weights, "bold");
     position: absolute;
     top: 50%;
     left: 50%;
