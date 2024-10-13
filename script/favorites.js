@@ -32,18 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateFavoritesCount() {
     if (favorites.length === 0) {
       favoritesCount.textContent = "";
+      document.querySelector(".header__favorites").classList.remove("filled");
     } else {
       favoritesCount.textContent = favorites.length;
+      document.querySelector(".header__favorites").classList.add("filled");
     }
   }
 
   function displayFavorites() {
     favoritesDropdown.innerHTML = "";
-    favorites.forEach((animal) => {
+    favorites.forEach((cat) => {
       favoritesDropdown.innerHTML += `
                 <div class="favorite-item">
-                    <img src="${animal.image}" alt="${animal.name}" />
-                    <p>${animal.name}</p>
+                    <img src="${cat.img.src}" alt="${h1}" />
+                    <p>${h1}</p>
                     <button class="infosheet__button">Оформить заявку</button>
                 </div>
             `;
