@@ -88,14 +88,12 @@ h1 {
   font-family: Cruinn, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: 400;
   line-height: 1.2;
-  font-size: 2.75rem;
 }
 
 h2 {
   font-family: Cruinn, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: 400;
   line-height: 1.2;
-  font-size: 1.75rem;
 }
 
 li[aria-current=page] {
@@ -132,7 +130,6 @@ li[aria-current=page] {
 }
 .header__links ul li a {
   color: #ff843d;
-  font-size: 1.25rem;
   font-weight: 600;
 }
 .header__links ul li a:hover {
@@ -150,9 +147,15 @@ li[aria-current=page] {
   stroke: #ffe090;
   transition: stroke 0.3s;
 }
+.header__favorites.filled svg {
+  fill: #ffe090;
+}
+.header__favorites.filled svg path {
+  stroke: #ffe090;
+}
 .header__favorites-count {
   color: #ff843d;
-  font-size: 1.25rem;
+  font-weight: 600;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -181,7 +184,6 @@ li[aria-current=page] {
 
 .button {
   padding: 0.3rem 1.7rem;
-  font-size: 1.25rem;
   font-family: Montserrat, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: 600;
   border-radius: 1rem;
@@ -219,7 +221,6 @@ li[aria-current=page] {
   gap: 0.625rem;
 }
 .footer__contact a, .footer__contact p {
-  font-size: 1rem;
   color: #ff843d;
   font-style: normal;
 }
@@ -355,7 +356,6 @@ li[aria-current=page] {
 }
 .home-happy-stories__text a {
   padding: 0.3rem 1.7rem;
-  font-size: 1.25rem;
   font-family: Montserrat, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: 600;
   border-radius: 1rem;
@@ -423,10 +423,6 @@ li[aria-current=page] {
   padding: 0 1.25rem 1.875rem 1.25rem;
   color: #ffffff;
 }
-.home-news__text p {
-  font-size: 1rem;
-}
-
 .home-checklist__container {
   display: flex;
   align-items: center;
@@ -483,9 +479,6 @@ li[aria-current=page] {
   color: #ffffff;
   gap: 1.375rem;
 }
-.about-mission__text-and-breadcrumb p {
-  font-size: 1.25rem;
-}
 .about-mission__img img {
   margin-top: 2.5rem;
 }
@@ -516,10 +509,6 @@ li[aria-current=page] {
   max-width: 45%;
   gap: 1.375rem;
 }
-.about-goals__text p {
-  font-size: 1.25rem;
-}
-
 .about-values__container {
   display: flex;
   align-items: center;
@@ -546,10 +535,6 @@ li[aria-current=page] {
   max-width: 45%;
   gap: 1.375rem;
 }
-.about-values__text p {
-  font-size: 1.25rem;
-}
-
 .about-volunteers__container {
   border-bottom: 2px solid #ff843d;
   display: flex;
@@ -887,7 +872,6 @@ li[aria-current=page] {
 }
 .happy-stories__title a {
   padding: 0.3rem 1.7rem;
-  font-size: 1.25rem;
   font-family: Montserrat, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: 600;
   border-radius: 1rem;
@@ -1234,9 +1218,6 @@ li[aria-current=page] {
   gap: 0.3125rem;
   margin-bottom: 1rem;
 }
-.catalog__description {
-  font-size: 1.25rem;
-}
 .catalog__pagination {
   display: flex;
   align-items: center;
@@ -1287,7 +1268,6 @@ li[aria-current=page] {
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  font-size: 1.25rem;
   color: #ff843d;
   display: flex;
   align-items: center;
@@ -1352,7 +1332,7 @@ li[aria-current=page] {
 .infosheet__container {
   border-top: 2px solid #ff843d;
   border-bottom: 2px solid #ff843d;
-  padding: 1.875rem 8.75rem 3.125rem;
+  padding-top: 1.875rem 8.75rem 3.125rem;
 }
 .infosheet__container .breadcrumb ul li {
   color: #ff843d;
@@ -1362,7 +1342,6 @@ li[aria-current=page] {
 }
 .infosheet__button {
   padding: 0.3rem 1.7rem;
-  font-size: 1.25rem;
   font-family: Montserrat, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: 600;
   border-radius: 1rem;
@@ -1371,6 +1350,7 @@ li[aria-current=page] {
   transition: box-shadow 0.2s;
   background-color: transparent;
   margin: 0 0 0 auto;
+  cursor: pointer;
 }
 .infosheet__button:hover {
   box-shadow: 1px 4px 10px 0px #ff843d;
@@ -1386,6 +1366,7 @@ li[aria-current=page] {
   justify-content: center;
   flex-direction: column;
   gap: 1.875rem;
+  padding-top: 1.875rem;
 }
 .infosheet__animal-card-container a {
   align-self: flex-end;
@@ -1518,9 +1499,6 @@ li[aria-current=page] {
 .form__dialog-content p {
   text-align: center;
 }
-.form__dialog-content p {
-  font-size: 1rem;
-}
 .form__form label {
   display: block;
   margin: 1.25rem 0 0 0;
@@ -1584,7 +1562,6 @@ li[aria-current=page] {
 }
 .form__form button {
   padding: 0.3rem 1.7rem;
-  font-size: 1.25rem;
   font-family: Montserrat, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: 600;
   border-radius: 1rem;
