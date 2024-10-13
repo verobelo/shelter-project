@@ -1,66 +1,103 @@
 @use "variables" as *;
 
 @mixin flex($direction, $justify-content, $align-items) {
-    display: flex;
-    align-items: $align-items;
-    justify-content: $justify-content;
-    flex-direction: $direction;    
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $direction;
 }
 
-@mixin card($background, $width, $gap, $direction, $justify-content, $align-items) {
-    @include flex($direction, $justify-content, $align-items);
-    border-radius: 2.8125rem;
-    color: map-get($colors, "base");
-    background-color: $background;
-    max-width: $width;
-    gap: $gap;
+@mixin card(
+  $background,
+  $width,
+  $gap,
+  $direction,
+  $justify-content,
+  $align-items
+) {
+  @include flex($direction, $justify-content, $align-items);
+  border-radius: 2.8125rem;
+  color: map-get($colors, "base");
+  background-color: $background;
+  max-width: $width;
+  gap: $gap;
 }
 
-@mixin button($border-color, $text-color, $hover-shadow-color, $active-bg-color, $active-text-color) {
-    padding: 0.3rem 1.7rem;
-    font-size: map-get($font-sizes, medium);
-    font-family: #{$font-family-text};
-    font-weight: map-get($font-weights, "bold");
-    border-radius: 1rem;
-    border: 2px solid $border-color;
-    color: $text-color;
-    transition: box-shadow 0.2s;
-    background-color: transparent;
+@mixin button(
+  $border-color,
+  $text-color,
+  $hover-shadow-color,
+  $active-bg-color,
+  $active-text-color
+) {
+  padding: 0.3rem 1.7rem;
+  font-size: map-get($font-sizes, medium);
+  font-family: #{$font-family-text};
+  font-weight: map-get($font-weights, "bold");
+  border-radius: 1rem;
+  border: 2px solid $border-color;
+  color: $text-color;
+  transition: box-shadow 0.2s;
+  background-color: transparent;
 
-    &:hover {
-        box-shadow: 1px 4px 10px 0px rgba($hover-shadow-color, 1);
-    }
+  &:hover {
+    box-shadow: 1px 4px 10px 0px rgba($hover-shadow-color, 1);
+  }
 
-    &:active {
-        box-shadow: none;
-        background-color: $active-bg-color;
-        color: $active-text-color;
-    }
+  &:active {
+    box-shadow: none;
+    background-color: $active-bg-color;
+    color: $active-text-color;
+  }
 }
 
 @mixin button-color {
-    @include button (
-        map-get($colors, "primary"),
-        map-get($colors, "primary"),
-        map-get($colors, "primary"),
-        map-get($colors, "primary"),
-        map-get($colors, "base")
-    )
+  @include button(
+    map-get($colors, "primary"),
+    map-get($colors, "primary"),
+    map-get($colors, "primary"),
+    map-get($colors, "primary"),
+    map-get($colors, "base")
+  );
 }
 
 @mixin button-white {
-    @include button (
-        map-get($colors, "base"),
-        map-get($colors, "base"),
-        map-get($colors, "base"),
-        map-get($colors, "base"),
-        map-get($colors, "primary")
-    )
+  @include button(
+    map-get($colors, "base"),
+    map-get($colors, "base"),
+    map-get($colors, "base"),
+    map-get($colors, "base"),
+    map-get($colors, "primary")
+  );
 }
 
 @mixin heading($size) {
-    font-family: #{$font-family-heading};
-    font-weight: map-get($font-weights, "regular");
-    line-height: 1.2;
-    font-size: map-get($font-sizes, $size);
+  font-family: #{$font-family-heading};
+  font-weight: map-get($font-weights, "regular");
+  line-height: 1.2;
+  font-size: map-get($font-sizes, $size);
 }
+
+/*@mixin desktop1200 {
+  @media (min-width: 1200px) and (max-width: 1499px) {
+    @content;
+  }
+}
+
+@mixin desktop1500 {
+  @media (min-width: 1500px) and (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin desktop1920 {
+  @media (min-width: 1920px) and (max-width: 2559px) {
+    @content;
+  }
+}
+
+@mixin desktop2560 {
+  @media (min-width: 2560px) {
+    @content;
+  }
+}*/
