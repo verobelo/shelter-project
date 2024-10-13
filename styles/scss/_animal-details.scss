@@ -10,7 +10,7 @@
   &__container {
     border-top: 2px solid map-get($colors, "primary");
     border-bottom: 2px solid map-get($colors, "primary");
-    padding: 1.875rem 8.75rem 3.125rem;
+    padding-top: 1.875rem 8.75rem 3.125rem;
 
     & .breadcrumb {
       & ul {
@@ -27,6 +27,7 @@
   &__button {
     @include button-color;
     margin: 0 0 0 auto;
+    cursor: pointer;
   }
 
   &__animal-card-container {
@@ -35,6 +36,7 @@
       align-self: flex-end;
     }
     gap: 1.875rem;
+    padding-top: 1.875rem;
   }
   &__animal-card {
     @include card(
