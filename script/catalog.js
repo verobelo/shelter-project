@@ -87,8 +87,10 @@ fetch("http://localhost:8080/api/pets/cats")
       const catDetails = `${cat.id}-cat-details.html`;
 
       const card = `
-        <a class="catalog__card" href="../pages/catalog/${catDetails}">
-          <img src="${cat.pathToAvatar}" alt="${cat.name}">
+        <div class="catalog__card">
+        <a href="${catDetails}">
+        <img src="${cat.pathToAvatar}" alt="${cat.name}">
+        </a>          
           <div class="catalog__text">
           <div class="catalog__name">
           <h1>${cat.name}</h1>
@@ -107,10 +109,14 @@ fetch("http://localhost:8080/api/pets/cats")
               </svg>
           </button>
           </div>          
-          <div class="catalog__gender"><span>${genderSymbol}</span><p>${cat.gender}</p></div>
-          <div class="catalog__description><p>${cat.description}</p></div>
+          <div class="catalog__gender">
+          <span>${genderSymbol}</span><p>${cat.gender}</p>
+          </div>
+          <div class="catalog__description">
+          <p>${cat.description}</p>
+          </div>
           </div>       
-        </a>
+        </div>
       `;
       catalogHTML += card;
       console.log("Full cat data:", cat);
