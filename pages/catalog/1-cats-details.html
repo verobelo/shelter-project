@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Майк | Приют "У них лапки"</title>
+    <title>Сплюшик | Приют "У них лапки"</title>
     <link
       rel="icon"
       href="/shelter-project-frontend/assets/images/home/home-logo.png"
@@ -40,7 +40,7 @@
           </div>
           <div class="header__nav-right">
             <div
-              class="header__favorites"
+              class="header__favorites-cart"
               aria-label="просмотреть понравившихся животных">
               <svg
                 class="header__favorites-icon"
@@ -64,143 +64,52 @@
     </header>
     <!-- Main -->
     <main>
+      <!-- Overlay -->
+      <div id="overlay" class="overlay"></div>
+      <!-- Form dialog-->
+      <div class="form__dialog container" id="dialog">
+        <div class="form__dialog-content" id="dialog-content"></div>
+      </div>
+      <!-- Confirmation dialog -->
+      <div class="confirmation-dialog container" id="confirmation">
+        <button
+          class="close-btn"
+          id="confirmation-close-btn"
+          aria-label="закрыть заявку">
+          <img
+            src="/shelter-project-frontend/assets/images/adoption-form/form-close.png"
+            alt="иконка крестика" />
+        </button>
+        <h1>Спасибо!</h1>
+        <h2>
+          Ваша заявка успешно отправлена. Наш менеджер перезвонит Вам в течение
+          20 минут.
+        </h2>
+      </div>
+
       <div class="infosheet__container container">
         <!-- Breadcrumb -->
         <nav aria-label="Строка навигации" class="breadcrumb">
           <ul>
             <li><a href="/shelter-project-frontend/index.html">Главная</a></li>
-            <li><a href="dogs.html">Собаки</a></li>
-            <li aria-current="page">Майк</li>
+            <li><a href="cats.html">Кошки</a></li>
+            <li aria-current="page">Сплюшик</li>
           </ul>
         </nav>
-        <!-- Overlay -->
-        <div id="overlay" class="overlay"></div>
-        <!-- Form dialog-->
-        <div class="form__dialog container" id="dialog">
-          <div class="form__dialog-content">
-            <button
-              class="close-btn"
-              id="form-close-btn"
-              aria-label="закрыть заявку">
-              <img
-                src="/shelter-project-frontend/assets/images/adoption-form/form-close.png"
-                alt="иконка крестика" />
-            </button>
-            <h1>Оформление заявки</h1>
-            <p>Заполните анкету, и мы с Вами свяжемся в течение 20 минут</p>
-            <form
-              action=""
-              class="form__form"
-              id="form"
-              method="post"
-              novalidate>
-              <label for="fname"
-                >Имя <span class="required">*</span
-                ><input
-                  aria-describedby="required-description"
-                  type="text"
-                  id="fname"
-                  name="user-fname"
-                  value=""
-                  pattern="^[а-яА-ЯёЁ \-]+$"
-                  minlength="2"
-                  maxlength="50"
-                  autocomplete="on"
-                  placeholder="Петр"
-                  required />
-              </label>
-              <span class="error" aria-live="polite"></span>
-              <label for="lname"
-                >Фамилия <span class="required">*</span
-                ><input
-                  aria-describedby="required-description"
-                  type="text"
-                  id="lname"
-                  name="user-lname"
-                  pattern="^[а-яА-ЯёЁ \-]+$"
-                  minlength="2"
-                  maxlength="50"
-                  value=""
-                  autocomplete="on"
-                  placeholder="Петров"
-                  required /></label
-              ><span class="error" aria-live="polite"></span>
-              <label for="tel"
-                >Телефон <span class="required">*</span
-                ><input
-                  aria-describedby="required-description"
-                  type="tel"
-                  id="tel"
-                  name="user-tel"
-                  placeholder="+79999999999"
-                  autocomplete="on"
-                  pattern="^\+[0-9]+$"
-                  maxlength="16"
-                  required
-              /></label>
-              <span class="error" aria-live="polite"></span>
-              <label for="email"
-                >Email <span class="required">*</span
-                ><input
-                  aria-describedby="required-description"
-                  type="email"
-                  id="email"
-                  name="user-email"
-                  required
-                  placeholder="petr.petrov@mail.ru"
-                  pattern="^[a-zA-Z0-9._%\+\-]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,}$"
-              /></label>
-              <span class="error" aria-live="polite"></span>
-              <p aria-hidden="true" id="required-description">
-                <span class="required">*</span> Обязательное для заполнения поле
-              </p>
-              <label for="personal-info"
-                ><input type="checkbox" id="personal-info" required />Нажимая на
-                кнопку “Оформить заявку”, я даю согласие на обработку
-                персональных данных (т.к. сайт работает в тестовом режиме, то
-                персональные данные не обрабатываются).</label
-              >
-              <span class="error" aria-live="polite"></span>
-              <label for="booking-conditions"
-                ><input type="checkbox" id="booking-conditions" required />Я
-                понимаю и соглашаюсь с тем, что бронь активна в течение 72
-                часов. Если менеджеру не удалось связаться со мной в течение
-                этого времени, бронь снимается. </label
-              ><span class="error" aria-live="polite"></span>
-              <button type="submit">Оформить заявку</button>
-            </form>
-          </div>
-        </div>
-        <!-- Confirmation dialog -->
-        <div class="confirmation-dialog container" id="confirmation">
-          <button
-            class="close-btn"
-            id="confirmation-close-btn"
-            aria-label="закрыть заявку">
-            <img
-              src="/shelter-project-frontend/assets/images/adoption-form/form-close.png"
-              alt="иконка крестика" />
-          </button>
-          <h1>Спасибо!</h1>
-          <h2>
-            Ваша заявка успешно отправлена. Наш менеджер перезвонит Вам в
-            течение 20 минут.
-          </h2>
-        </div>
         <!-- Animal card -->
         <div class="infosheet__animal-card-container container">
           <button class="infosheet__button">Оформить заявку</button>
           <div class="infosheet__animal-card">
             <div class="infosheet__img">
               <img
-                src="/shelter-project-frontend/assets/images/dog-details/dog-1-1200.jpeg"
-                alt="новошотландский ретривер" />
+                src="/shelter-project-frontend/assets/images/cat-details/cat-1-1200.jpeg"
+                alt="спящий кот на диване" />
             </div>
             <div class="infosheet__animal-description">
               <div class="infosheet__animal-name">
-                <h1>Майк</h1>
+                <h1>Сплюшик</h1>
                 <button
-                  class="infosheet__favorites"
+                  class="infosheet__add-to-favorites"
                   aria-label="добавить в избранное">
                   <svg
                     class="infosheet__favorites-icon"
@@ -219,11 +128,11 @@
               <div class="infosheet__animal-gender">
                 <p><span>&#9794;</span>Мальчик</p>
               </div>
-              <h2>Озорной пёс, который не знает устали</h2>
+              <h2>Любитель поспать в любое время суток</h2>
               <div class="infosheet__highlights">
                 <p><span></span>Вакцинирован</p>
                 <p><span></span>Кастрирован</p>
-                <p><span></span>Нуждается в активности</p>
+                <p><span></span>Хромает на одну лапку</p>
               </div>
             </div>
           </div>
@@ -235,33 +144,33 @@
             <ul class="glide__slides">
               <li class="glide__slide">
                 <img
-                  src="/shelter-project-frontend/assets/images/dog-details/dog-2-1200.jpg"
-                  alt="новошотландский ретривер" />
+                  src="/shelter-project-frontend/assets/images/cat-details/cat-2-1200.jpg"
+                  alt="европейский короткошерстный кот" />
               </li>
               <li class="glide__slide">
                 <img
-                  src="/shelter-project-frontend/assets/images/dog-details/dog-3-1200.jpg"
-                  alt="новошотландский ретривер" />
+                  src="/shelter-project-frontend/assets/images/cat-details/cat-3-1200.jpg"
+                  alt="европейский короткошерстный кот" />
               </li>
               <li class="glide__slide">
                 <img
-                  src="/shelter-project-frontend/assets/images/dog-details/dog-4-1200.jpg"
-                  alt="новошотландский ретривер" />
+                  src="/shelter-project-frontend/assets/images/cat-details/cat-4-1200.jpg"
+                  alt="европейский короткошерстный кот" />
               </li>
               <li class="glide__slide">
                 <img
-                  src="/shelter-project-frontend/assets/images/dog-details/dog-5-1200.jpg"
-                  alt="новошотландский ретривер" />
+                  src="/shelter-project-frontend/assets/images/cat-details/cat-5-1200.jpg"
+                  alt="европейский короткошерстный кот" />
               </li>
               <li class="glide__slide">
                 <img
-                  src="/shelter-project-frontend/assets/images/dog-details/dog-6-1200.jpg"
-                  alt="новошотландский ретривер" />
+                  src="/shelter-project-frontend/assets/images/cat-details/cat-6-1200.jpg"
+                  alt="европейский короткошерстный кот" />
               </li>
               <li class="glide__slide">
                 <img
-                  src="/shelter-project-frontend/assets/images/dog-details/dog-7-1200.jpg"
-                  alt="новошотландский ретривер" />
+                  src="/shelter-project-frontend/assets/images/cat-details/cat-7-1200.jpg"
+                  alt="европейский короткошерстный кот" />
               </li>
             </ul>
           </div>
@@ -328,31 +237,30 @@
         <!-- Animal story -->
         <div class="infosheet__animal-story container">
           <p>
-            Майк — молодой и очень активный пёс, который не может прожить ни дня
-            без прогулок. Ему нравится исследовать окружающий мир, будь то парк,
-            лес или даже городские улицы. Каждая новая прогулка для него — это
-            маленькое приключение, и он с радостью пойдёт за вами, куда бы вы ни
-            отправились.
+            Сплюшик — ласковый котик из приюта, который сразу завоюет ваше
+            сердце. Он спокойный, любит внимание и всегда рад, когда кто-то
+            находится рядом. Несмотря на то, что Сплюшик немного застенчив, он
+            быстро привыкает к новому дому и людям.
           </p>
           <p>
-            Энергия Майка кажется безграничной. Он любит играть в подвижные
-            игры, особенно в принесение палки или мяча. Когда вы берёте поводок
-            в руки, его глаза загораются, и он с нетерпением ждёт момента, когда
-            сможет побежать навстречу ветру. В его душе настоящий искатель
-            приключений.
+            Его самая большая страсть — сон. Сплюшик может провести целые часы,
+            дремля в самом уютном уголке дома. Ему особенно нравятся мягкие
+            подушки и теплые пледы, где он может расслабиться и забыться в
+            приятных сновидениях.
           </p>
           <p>
-            Несмотря на свою активность, Майк — очень ласковый и дружелюбный
-            пёс. Он любит компанию людей и всегда старается быть рядом. После
-            долгой прогулки он с удовольствием полежит рядом с вами, наслаждаясь
-            вашим присутствием и тёплыми словами.
+            У Сплюшика есть небольшая особенность — он хромает на одну лапку.
+            Однако это не мешает ему быть активным и любопытным. Он любит
+            наблюдать за тем, что происходит вокруг, и иногда с интересом
+            исследует новые места в доме. Сплюшик всегда старается быть рядом с
+            людьми, особенно когда чувствует, что ему уделяют внимание. Ему
+            нравится спокойно сидеть на подоконнике и смотреть на улицу,
+            наблюдая за птицами и прохожими.
           </p>
           <p>
-            Майк ищет семью, которая сможет разделить его любовь к активному
-            образу жизни. Он станет верным другом для тех, кто ценит весёлые
-            прогулки, игры на свежем воздухе и готов дарить ему свою заботу и
-            внимание. Майк ждёт того, кто станет его настоящим хозяином и другом
-            на всю жизнь.
+            Этот котик — настоящий нежный друг. Сплюшик идеально подойдет для
+            семьи, которая ищет спокойного и заботливого питомца, готового
+            делить уютные вечера и моменты тишины.
           </p>
         </div>
       </div>
