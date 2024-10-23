@@ -71,7 +71,7 @@
   &__animal-name {
     @include flex(row, space-between, center);
   }
-  &__favorites {
+  &__add-to-favorites {
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -107,7 +107,6 @@
       center
     );
     color: map-get($colors, "base");
-    /*height: 29rem;*/
   }
 }
 

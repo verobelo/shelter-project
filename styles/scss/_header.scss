@@ -39,7 +39,7 @@
       }
     }
   }
-  &__favorites {
+  &__favorites-cart {
     position: relative;
     display: inline-block;
     border: none;
@@ -51,7 +51,7 @@
       transition: stroke 0.3s;
     }
   }
-  &__favorites.filled {
+  &__favorites-cart.filled {
     & svg {
       fill: map-get($colors, "tertiary");
     }
@@ -79,8 +79,7 @@
     right: 0;
     background: map-get($colors, "form-primary");
     border-radius: 2.8125rem;
-    max-width: 20rem;
-    padding: 1rem;
+    padding: 1.25rem 1.875rem;
     display: none;
     &.show {
       display: block;

@@ -51,11 +51,20 @@
   }
   &__filters {
     grid-column: 1 / 2;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding-top: 1rem;
   }
+
   &__card-group {
     grid-column: 2 / 3;
+    min-height: 100vh;
+    @include flex(column, flex-start, flex-start);
+    gap: 1.875rem;
   }
   &__card {
+    /*@include flex(row, center, center);*/
     @include card(
       map-get($colors, "primary"),
       770px,
@@ -64,28 +73,34 @@
       space-between,
       center
     );
+    min-width: 770px;
     max-height: 11.875rem;
     overflow: hidden;
-    &:hover {
-      box-shadow: 0px 4px 20px 0px rgba(255, 132, 61, 1);
-    }
   }
-  & a {
+  &__img {
+    border-radius: 2.8125rem;
+    height: 11.875rem;
     & img {
       height: 100%;
-      width: 48%;
-      border-radius: 2.8125rem;
+      border-radius: inherit;
       object-fit: cover;
       object-position: center;
     }
   }
   &__text {
     /*@include flex(column, center, flex-start);*/
-    width: 48%;
+    flex: 1;
     padding-right: 2.1875rem;
   }
   &__name {
     @include flex(row, space-between, center);
+    & a {
+      color: map-get($colors, "base");
+      &:hover {
+        color: map-get($colors, "tertiary");
+        transition: box-shadow 0.2s;
+      }
+    }
   }
   &__gender {
     @include flex(row, flex-start, center);
@@ -95,6 +110,9 @@
   }
   &__description {
     font-size: map-get($font-sizes, "medium");
+    & p {
+      font-weight: map-get($font-weights, "medium");
+    }
   }
 
   &__pagination {
@@ -131,7 +149,8 @@
 
   &__links {
     width: 20%;
-    @include flex(row, space-between, center);
+    @include flex(row, space-around, center);
+    cursor: pointer;
   }
 
   &__page-number:not(.active) {
@@ -144,6 +163,7 @@
 
   &__filters-container {
     display: inline-block;
+    position: sticky;
     & ul {
       margin-bottom: 1.25rem;
     }
@@ -223,5 +243,62 @@
     & li {
       display: block;
     }
+  }
+}
+
+.infosheet {
+  &__add-to-favorites {
+    &.filled {
+      & svg {
+        fill: map-get($colors, "tertiary");
+      }
+      & svg path {
+        stroke: map-get($colors, "tertiary");
+      }
+    }
+    &:disabled {
+      cursor: default;
+    }
+  }
+}
+
+.favorites-dropdown {
+  @include flex(column, center, center);
+  gap: 1.875rem;
+  &__name {
+    width: 100%;
+    @include flex(row, space-between, flex-start);
+    & h2 {
+      color: map-get($colors, "primary");
+    }
+  }
+  &__img {
+    width: 16.5rem;
+
+    & img {
+      border-radius: 0.9375rem;
+    }
+  }
+  &__separator {
+    height: 2px;
+    background-color: map-get($colors, "primary");
+    width: 16.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.remove-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  @include flex(row, flex-end, center);
+}
+
+.favorites-item {
+  @include flex(column, center, center);
+  gap: 1.25rem;
+  & button {
+    margin-left: 0;
   }
 }
