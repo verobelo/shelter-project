@@ -38,7 +38,7 @@
           </div>
           <div class="header__nav-right">
             <div
-              class="header__favorites"
+              class="header__favorites-cart"
               aria-label="просмотреть понравившихся животных">
               <svg
                 class="header__favorites-icon"
@@ -67,6 +67,28 @@
 
     <!-- Main -->
     <main>
+      <!-- Overlay -->
+      <div id="overlay" class="overlay"></div>
+      <!-- Form dialog-->
+      <div class="form__dialog container" id="dialog">
+        <div class="form__dialog-content" id="dialog-content"></div>
+      </div>
+      <!-- Confirmation dialog -->
+      <div class="confirmation-dialog container" id="confirmation">
+        <button
+          class="close-btn"
+          id="confirmation-close-btn"
+          aria-label="закрыть заявку">
+          <img
+            src="/shelter-project-frontend/assets/images/adoption-form/form-close.png"
+            alt="иконка крестика" />
+        </button>
+        <h1>Спасибо!</h1>
+        <h2>
+          Ваша заявка успешно отправлена. Наш менеджер перезвонит Вам в течение
+          20 минут.
+        </h2>
+      </div>
       <!--Hero section-->
       <section class="hero">
         <div class="hero__container container">
@@ -255,5 +277,6 @@
       </div>
     </footer>
     <script src="script/favorites.js"></script>
+    <script src="script/form.js"></script>
   </body>
 </html>
