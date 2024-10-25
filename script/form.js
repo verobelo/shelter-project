@@ -22,8 +22,10 @@ document.addEventListener("click", function (e) {
     if (selectedAnimal) {
       fetchForm().then(() => {
         const animalIdField = document.getElementById("animal-id");
-        if (animalIdField) {
+        const animalNameInput = document.getElementById("animal-name");
+        if (animalIdField && animalNameInput) {
           animalIdField.value = selectedAnimal.id;
+          animalNameInput.value = `${selectedAnimal.name}`;
         }
       });
     } else {
