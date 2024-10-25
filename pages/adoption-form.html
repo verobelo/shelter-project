@@ -20,7 +20,13 @@
     </button>
     <h1>Оформление заявки</h1>
     <p>Заполните анкету, и мы с Вами свяжемся в течение 20 минут</p>
-    <form action="" class="form__form" id="form" method="post" novalidate>
+    <form
+      action="/api/adoption"
+      class="form__form"
+      id="form"
+      method="post"
+      novalidate>
+      <input type="hidden" id="animal-id" name="animal-id" value="" />
       <label for="fname"
         >Имя <span class="required">*</span
         ><input
@@ -73,6 +79,7 @@
           id="email"
           name="email"
           pattern="^[a-zA-Z0-9._%\+\-]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,}$"
+          placeholder="petr.petrov@yandex.ru"
           required
       /></label>
       <span class="error" aria-live="polite"></span>
