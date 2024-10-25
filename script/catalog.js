@@ -47,7 +47,8 @@ function displayCards(page, petType) {
               <h1>${pet.name}</h1>
             </a>
             <button
-              class="infosheet__add-to-favorites" 
+              class="infosheet__add-to-favorites"
+              data-id="${pet.id}" 
               data-name="${pet.name}" 
               data-image="${pet.pathToAvatar}" 
               aria-label="добавить в избранное">

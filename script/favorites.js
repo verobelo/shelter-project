@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const animal = {
         name: button.dataset.name,
         image: button.dataset.image,
+        id: button.dataset.id,
       };
 
       if (!isAnimalInFavorites(animal.name)) {
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.setAttribute("disabled", true);
 
         const animalCardHTML = `
-          <div class="favorites-item" data-name="${animal.name}">
+          <div class="favorites-item" data-name="${animal.name}" data-id="${animal.id}">
             <div class="favorites-dropdown__name">
               <h1>${animal.name}</h1>
               <button class="remove-btn" aria-label="закрыть заявку" data-name="${animal.name}">
@@ -44,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="favorites-dropdown__img">
               <img src="${animal.image}" alt="${animal.name}" />
             </div>
-            <button class="infosheet__button">Оформить заявку</button>
+            <button class="infosheet__button" data-id="${animal.id}">Оформить заявку</button>
           </div>
         `;
 

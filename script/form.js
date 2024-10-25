@@ -4,22 +4,43 @@ const overlay = document.getElementById("overlay");
 // Form functionality
 const formDialog = document.getElementById("dialog");
 const confirmationDialog = document.getElementById("confirmation");
-const formOpenBtn = document.querySelector(".infosheet__button");
 const dialogContent = document.getElementById("dialog-content");
 const confirmationCloseBtn = document.getElementById("confirmation-close-btn");
 
 // Open form when the button is clicked
 
+// Event delegation for button click
 document.addEventListener("click", function (e) {
   const button = e.target.closest(".infosheet__button");
   if (button) {
-    fetchForm();
+    const animalName = button.closest(".favorites-item").dataset.name;
+    const favorites = JSON.parse(sessionStorage.getItem("favorites")) || [];
+    const selectedAnimal = favorites.find(
+      (animal) => animal.name === animalName
+    );
+
+    if (selectedAnimal) {
+      fetchForm().then(() => {
+        const animalIdField = document.getElementById("animal-id");
+        if (animalIdField) {
+          animalIdField.value = selectedAnimal.id;
+        }
+      });
+    } else {
+      console.error("Animal not found in favorites");
+    }
   }
 });
 
+// Fetch the form and inject it into dialog
 function fetchForm() {
-  fetch("/shelter-project-frontend/pages/adoption-form.html")
-    .then((response) => response.text())
+  return fetch("/shelter-project-frontend/pages/adoption-form.html")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
     .then((data) => {
       dialogContent.innerHTML = data;
       formDialog.style.display = "block";
