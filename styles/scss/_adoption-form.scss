@@ -21,6 +21,7 @@
     max-width: 880px;
     width: 100%;
     z-index: 1000;
+    height: 100vh;
   }
   &__dialog-content {
     & h1,
@@ -34,7 +35,7 @@
   &__form {
     & label {
       display: block;
-      margin: 1.25rem 0 0 0;
+      margin: 1rem 0 0 0;
       & input:not([type="checkbox"]) {
         width: 100%;
         border-radius: 1.25rem;
@@ -91,6 +92,18 @@
           );
           background-color: map-get($colors, "base");
         }
+      }
+    }
+    & label[for="animal-name"] {
+      padding: 0.2rem 1rem;
+      text-align: center;
+      font-size: map-get($font-sizes, "medium");
+      font-family: $font-family-heading;
+      & input {
+        font-size: map-get($font-sizes, "large");
+        background-color: map-get($colors, "form-secondary");
+        text-align: center;
+        padding: 0.2rem;
       }
     }
     & #required-description {
