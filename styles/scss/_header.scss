@@ -81,6 +81,7 @@
     border-radius: 2.8125rem;
     padding: 1.25rem 1.875rem;
     display: none;
+    z-index: 999;
     &.show {
       display: block;
     }
