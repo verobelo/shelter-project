@@ -1631,7 +1631,24 @@ li[aria-current=page] {
   max-width: 880px;
   width: 100%;
   z-index: 1000;
-  height: 100vh;
+}
+.form__dialog-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.form__dialog-content::-webkit-scrollbar {
+  width: 10px;
+}
+.form__dialog-content::-webkit-scrollbar-track {
+  background: #ffe8da;
+  border-radius: 10px;
+}
+.form__dialog-content::-webkit-scrollbar-thumb {
+  background: #ffcaac;
+  border-radius: 10px;
+}
+.form__dialog-content::-webkit-scrollbar-thumb:hover {
+  background: #ffa979;
 }
 .form__dialog-content h1,
 .form__dialog-content p {
