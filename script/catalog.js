@@ -1,6 +1,6 @@
 let fetchedData = [];
 const cardsPerPage = 4;
-let totalPages = 7;
+let totalPages;
 let currentPage = 1;
 
 // Variables
@@ -8,6 +8,7 @@ const catalogCardGroup = document.getElementById("catalog");
 const pageLinks = document.querySelector(".catalog__links");
 const prevButton = document.querySelector(".catalog__prev-btn");
 const nextButton = document.querySelector(".catalog__next-btn");
+const applyFiltersButton = document.getElementById("apply-filters");
 
 // Fetch the data based on the type of pet
 function fetchPetData(petType) {
@@ -15,26 +16,53 @@ function fetchPetData(petType) {
     .then((response) => response.json())
     .then((data) => {
       fetchedData = data;
-      /* totalPages = Math.ceil(fetchedData.length / cardsPerPage); */
-      displayCards(currentPage, petType);
+      totalPages = Math.ceil(fetchedData.length / cardsPerPage);
+      displayCards(currentPage, fetchedData);
       createPagination();
       updateButtons();
-      console.log(data);
     })
     .catch((error) => console.error("Error fetching data:", error));
 }
 
+// Apply filters based on the selected gender
+function applyFilters() {
+  const selectedGenders = Array.from(
+    document.querySelectorAll('input[name="gender"]:checked')
+  ).map((el) => el.value);
+
+  if (selectedGenders.includes("all")) {
+    displayCards(currentPage, fetchedData);
+    totalPages = Math.ceil(fetchedData.length / cardsPerPage);
+    createPagination();
+    updateButtons();
+    return;
+  }
+
+  const filteredData = fetchedData.filter((pet) => {
+    return selectedGenders.length === 0 || selectedGenders.includes(pet.gender);
+  });
+
+  currentPage = 1;
+  displayCards(currentPage, filteredData);
+  totalPages = Math.ceil(filteredData.length / cardsPerPage);
+  createPagination();
+  updateButtons();
+}
+
+applyFiltersButton.addEventListener("click", applyFilters);
+
 // Function to display cards for the current page
-function displayCards(page, petType) {
+function displayCards(page, data = fetchedData) {
+  const dataArray = Array.isArray(data) ? data : fetchedData;
   const start = (page - 1) * cardsPerPage;
   const end = start + cardsPerPage;
-  const pageData = fetchedData.slice(start, end);
+  const pageData = dataArray.slice(start, end);
 
   catalogCardGroup.innerHTML = "";
 
   pageData.forEach((pet) => {
     const genderSymbol = pet.gender === "Мальчик" ? "&#9794;" : "&#9792;";
-    const petDetails = `${pet.id}-${petType}-details.html`;
+    const petDetails = `${pet.id}-${pet.type}-details.html`;
 
     const card = `
       <div class="catalog__card">
@@ -141,7 +169,7 @@ nextButton.addEventListener("click", () => {
   }
 });
 
-// Filters
+// Filters toggle functionality
 const filters = document.querySelectorAll(".catalog__filter-options");
 const filterNames = document.querySelectorAll(".catalog__filter-name");
 
@@ -152,6 +180,7 @@ filterNames.forEach((name, index) => {
   });
 });
 
+// Initialize catalog with default pet type
 function initCatalog(petType) {
   fetchPetData(petType);
 }
