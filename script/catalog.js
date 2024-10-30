@@ -16,6 +16,7 @@ function fetchPetData(petType) {
     .then((response) => response.json())
     .then((data) => {
       fetchedData = data;
+      console.log("Fetched Data Sample:", fetchedData[0]);
       totalPages = Math.ceil(fetchedData.length / cardsPerPage);
       displayCards(currentPage, fetchedData);
       createPagination();
@@ -24,27 +25,63 @@ function fetchPetData(petType) {
     .catch((error) => console.error("Error fetching data:", error));
 }
 
-// Apply filters based on the selected gender
 function applyFilters() {
   const selectedGenders = Array.from(
     document.querySelectorAll('input[name="gender"]:checked')
   ).map((el) => el.value);
 
-  if (selectedGenders.includes("all")) {
-    displayCards(currentPage, fetchedData);
-    totalPages = Math.ceil(fetchedData.length / cardsPerPage);
-    createPagination();
-    updateButtons();
-    return;
-  }
+  const selectedBreeds = Array.from(
+    document.querySelectorAll('input[name="breed"]:checked')
+  ).map((el) => el.value);
+
+  const selectedColors = Array.from(
+    document.querySelectorAll('input[name="color"]:checked')
+  ).map((el) => el.value);
+
+  const selectedHair = Array.from(
+    document.querySelectorAll('input[name="hair"]:checked')
+  ).map((el) => el.value);
+
+  const selectedHealth = Array.from(
+    document.querySelectorAll('input[name="health"]:checked')
+  ).map((el) => el.value);
+
+  const selectedSize = Array.from(
+    document.querySelectorAll('input[name="size"]:checked')
+  ).map((el) => el.value);
+
+  console.log("Selected Size:", selectedSize);
 
   const filteredData = fetchedData.filter((pet) => {
-    return selectedGenders.length === 0 || selectedGenders.includes(pet.gender);
+    const genderMatch =
+      selectedGenders.includes("all") || selectedGenders.includes(pet.gender);
+    const breedMatch =
+      selectedBreeds.includes("all") ||
+      selectedBreeds.includes(pet.breed ? "true" : "false");
+    const colorMatch =
+      selectedColors.includes("all") || selectedColors.includes(pet.color);
+    const hairMatch =
+      selectedHair.includes("all") || selectedHair.includes(pet.hair);
+    const healthMatch =
+      selectedHealth.includes("all") || selectedHealth.includes(pet.health);
+    const sizeMatch =
+      selectedSize.includes("all") || selectedSize.includes(pet.size);
+
+    return (
+      (selectedGenders.length === 0 || genderMatch) &&
+      (selectedBreeds.length === 0 || breedMatch) &&
+      (selectedColors.length === 0 || colorMatch) &&
+      (selectedHair.length === 0 || hairMatch) &&
+      (selectedHealth.length === 0 || healthMatch) &&
+      (selectedSize.length === 0 || sizeMatch)
+    );
   });
 
+  console.log("Filtered Data After Filtering:", filteredData);
+
   currentPage = 1;
-  displayCards(currentPage, filteredData);
   totalPages = Math.ceil(filteredData.length / cardsPerPage);
+  displayCards(currentPage, filteredData);
   createPagination();
   updateButtons();
 }
