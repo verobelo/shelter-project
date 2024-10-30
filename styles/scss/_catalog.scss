@@ -302,3 +302,7 @@
     margin-left: 0;
   }
 }
+
+.apply-filters {
+  @include button-color;
+}
