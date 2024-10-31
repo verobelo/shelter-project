@@ -99,7 +99,7 @@ function displayCards(page, data = fetchedData) {
 
   pageData.forEach((pet) => {
     const genderSymbol = pet.gender === "Мальчик" ? "&#9794;" : "&#9792;";
-    const petDetails = `${pet.id}-${pet.type}-details.html`;
+    const petDetails = `${pet.id}-details.html`;
 
     const card = `
       <div class="catalog__card">
