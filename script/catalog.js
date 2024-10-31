@@ -84,7 +84,7 @@ function applyFilters() {
     const sizeMatch =
       selectedSize.includes("all") || selectedSize.includes(pet.size);
 
-    const petAge = calculateAge(pet.createdDate);
+    const petAge = calculateAge(pet.birthDate);
     const ageMatch =
       selectedAges.includes("all") ||
       selectedAges.some((ageGroup) => {
