@@ -49,8 +49,25 @@ function applyFilters() {
   const selectedSize = Array.from(
     document.querySelectorAll('input[name="size"]:checked')
   ).map((el) => el.value);
+  const selectedAges = Array.from(
+    document.querySelectorAll('input[name="age"]:checked')
+  ).map((el) => el.value);
 
-  console.log("Selected Size:", selectedSize);
+  console.log("Selected Age:", selectedAges);
+
+  function calculateAge(birthDate) {
+    const birth = new Date(birthDate);
+    const today = new Date();
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birth.getDate())
+    ) {
+      age--;
+    }
+    return age;
+  }
 
   const filteredData = fetchedData.filter((pet) => {
     const genderMatch =
@@ -67,13 +84,25 @@ function applyFilters() {
     const sizeMatch =
       selectedSize.includes("all") || selectedSize.includes(pet.size);
 
+    const petAge = calculateAge(pet.createdDate);
+    const ageMatch =
+      selectedAges.includes("all") ||
+      selectedAges.some((ageGroup) => {
+        if (ageGroup === "kids") return petAge < 1;
+        if (ageGroup === "teens") return petAge >= 1 && petAge <= 5;
+        if (ageGroup === "adults") return petAge >= 6 && petAge <= 10;
+        if (ageGroup === "wise") return petAge > 10;
+        return false;
+      });
+
     return (
       (selectedGenders.length === 0 || genderMatch) &&
       (selectedBreeds.length === 0 || breedMatch) &&
       (selectedColors.length === 0 || colorMatch) &&
       (selectedHair.length === 0 || hairMatch) &&
       (selectedHealth.length === 0 || healthMatch) &&
-      (selectedSize.length === 0 || sizeMatch)
+      (selectedSize.length === 0 || sizeMatch) &&
+      (selectedAges.length === 0 || ageMatch)
     );
   });
 
