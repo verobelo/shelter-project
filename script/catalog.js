@@ -127,7 +127,7 @@ function displayCards(page, data = fetchedData) {
   catalogCardGroup.innerHTML = "";
 
   pageData.forEach((pet) => {
-    const genderSymbol = pet.gender === "Мальчик" ? "&#9794;" : "&#9792;";
+    const genderSymbol = pet.gender === "Мужской" ? "&#9794;" : "&#9792;";
     const petDetails = `${pet.id}-details.html`;
 
     const card = `
