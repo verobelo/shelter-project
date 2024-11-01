@@ -53,7 +53,7 @@ function applyFilters() {
     document.querySelectorAll('input[name="age"]:checked')
   ).map((el) => el.value);
 
-  console.log("Selected Age:", selectedAges);
+  console.log("Selected Gender:", selectedGenders);
 
   function calculateAge(birthDate) {
     const birth = new Date(birthDate);
