@@ -7,121 +7,126 @@
 @use "breadcrumb" as *;
 
 .happy-stories {
-    &__container {
-        border-top: 2px solid map-get($colors, "primary");
-        border-bottom: 2px solid map-get($colors, "primary" );
-        padding: 1.875rem 8.75rem 3.125rem 8.75rem;
-        
-        & .breadcrumb {
-            & ul {
-                & li {
-                    color: map-get($colors, "primary");
+  &__container {
+    border-top: 2px solid map-get($colors, "primary");
+    border-bottom: 2px solid map-get($colors, "primary");
+    padding: 1.875rem 8.75rem 3.125rem 8.75rem;
 
-                    & a {
-                        color: map-get($colors, "primary");
-                    }
-                }
+    & .breadcrumb {
+      & ul {
+        & li {
+          $link-color: map-get($colors, "primary");
+          color: $link-color;
+          & a {
+            color: $link-color;
+            @include underline-color($link-color);
+
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-position: 0 100%;
+            transition: background-size 300ms ease,
+              background-position 300ms ease;
+
+            &:hover {
+              background-size: 100% 100%;
             }
+          }
         }
+      }
     }
-    &__card-group {
-        margin-top: 1.25rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 3;
-        gap: 5rem;
-}
+  }
+  &__card-group {
+    margin-top: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3;
+    gap: 5rem;
+  }
 
-    &__card {
-        @include card(
-        map-get($colors, "primary"),
-        28rem,
-        2.5rem,
-        column,
-        flex-start,
-        center);
-        max-height: 32rem;
-}
+  &__card {
+    @include card(
+      map-get($colors, "primary"),
+      28rem,
+      2.5rem,
+      column,
+      flex-start,
+      center
+    );
+    max-height: 32rem;
+  }
 
-    &__img {
+  &__img {
     flex: 2;
     overflow: hidden;
     width: 100%;
     border-radius: inherit;
-    
 
-        & img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;            
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-}
+  }
 
-    &__title {
+  &__title {
     flex: 1;
     @include flex(column, flex-start, flex-start);
     gap: 1.875rem;
-    padding: 0 2.5rem 2.5rem 2.5rem;;
-        & a {
-        @include button-white;
+    padding: 0 2.5rem 2.5rem 2.5rem;
+    & a {
+      @include button-white;
     }
-}
+  }
 
-
-
-    &__pagination {
+  &__pagination {
     @include flex(row, center, center);
     gap: 3.125rem;
     margin-top: 3.125rem;
 
-        & button {
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
+    & button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
 
-        &:hover svg {
-
-            path,
-            circle {
-                stroke: map-get($colors, "primary");
-                transition: stroke 0.3s;
-            }
+      &:hover svg {
+        path,
+        circle {
+          stroke: map-get($colors, "primary");
+          transition: stroke 0.3s;
         }
+      }
 
-        &:disabled {
-            cursor: default;
+      &:disabled {
+        cursor: default;
 
-            svg {
-
-                path,
-                circle {
-                    stroke: map-get($colors, "form-primary");
-                }
-            }
+        svg {
+          path,
+          circle {
+            stroke: map-get($colors, "form-primary");
+          }
         }
+      }
     }
-}
+  }
 
-    &__links {
+  &__links {
     width: 20%;
     @include flex(row, space-between, center);
     cursor: pointer;
-        & span:hover {
-            color: map-get($colors, "primary" );
-        }
-}
+    & span:hover {
+      color: map-get($colors, "primary");
+    }
+  }
 
-    &__page-number:not(.active) {
+  &__page-number:not(.active) {
     color: map-get($colors, "form-secondary");
-}
+  }
 
-    &__ellipsis {
+  &__ellipsis {
     color: map-get($colors, "form-secondary");
+  }
 }
-
-}
-
 
 .active {
-    color: map-get($colors, "primary");
+  color: map-get($colors, "primary");
 }
