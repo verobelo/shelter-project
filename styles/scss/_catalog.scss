@@ -21,10 +21,21 @@
       margin-left: 6.25rem;
       & ul {
         & li {
-          color: map-get($colors, "primary");
-
+          $link-color: map-get($colors, "primary");
+          color: $link-color;
           & a {
-            color: map-get($colors, "primary");
+            color: $link-color;
+            @include underline-color($link-color);
+
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-position: 0 100%;
+            transition: background-size 300ms ease,
+              background-position 300ms ease;
+
+            &:hover {
+              background-size: 100% 100%;
+            }
           }
         }
       }

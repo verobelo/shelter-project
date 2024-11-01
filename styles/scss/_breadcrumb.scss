@@ -13,13 +13,10 @@
     & li {
       margin-right: 0.5em;
       & a {
-        color: map-get($colors, "base");
-        background-image: linear-gradient(
-          transparent 0%,
-          transparent 90%,
-          map-get($colors, "primary") 90%,
-          map-get($colors, "primary") 100%
-        );
+        $link-color: map-get($colors, "base");
+        color: $link-color;
+        @include underline-color($link-color);
+
         background-repeat: no-repeat;
         background-size: 0% 100%;
         background-position: 0 100%;

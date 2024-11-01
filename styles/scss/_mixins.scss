@@ -78,6 +78,20 @@
   font-size: map-get($font-sizes, $size);
 }
 
+@mixin underline-color($link-color) {
+  $underline-color: if(
+    $link-color == map-get($colors, "primary"),
+    map-get($colors, "primary"),
+    map-get($colors, "base")
+  );
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent 92%,
+    $underline-color 92%,
+    $underline-color 100%
+  );
+}
+
 /*@mixin desktop1200 {
   @media (min-width: 1200px) and (max-width: 1499px) {
     @content;
