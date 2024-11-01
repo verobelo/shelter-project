@@ -16,7 +16,6 @@ function fetchPetData(petType) {
     .then((response) => response.json())
     .then((data) => {
       fetchedData = data;
-      console.log("Fetched Data Sample:", fetchedData[0]);
       totalPages = Math.ceil(fetchedData.length / cardsPerPage);
       displayCards(currentPage, fetchedData);
       createPagination();
