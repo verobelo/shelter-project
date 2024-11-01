@@ -5,22 +5,35 @@
 @use "base" as *;
 
 .breadcrumb {
-    & ul {
-        @include flex(row, flex-start, center);
-        flex-wrap: wrap;
-        list-style: none;
-        color: map-get($colors, "base" );
-        & li {
-            margin-right: 0.5em;
-            & a {
-                color: map-get($colors, "base" );
-            }
-        }      
-   } 
-    & li:not(:last-child)::after {
-        display: inline-block;
-        content: ">";
-        margin-left: 0.5em;
-    }
-}
+  & ul {
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+    list-style: none;
+    color: map-get($colors, "base");
+    & li {
+      margin-right: 0.5em;
+      & a {
+        color: map-get($colors, "base");
+        background-image: linear-gradient(
+          transparent 0%,
+          transparent 90%,
+          map-get($colors, "primary") 90%,
+          map-get($colors, "primary") 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        background-position: 0 100%;
+        transition: background-size 300ms ease, background-position 300ms ease;
 
+        &:hover {
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+  & li:not(:last-child)::after {
+    display: inline-block;
+    content: ">";
+    margin-left: 0.5em;
+  }
+}

@@ -276,6 +276,14 @@ li[aria-current=page] {
 }
 .breadcrumb ul li a {
   color: #ffffff;
+  background-image: linear-gradient(transparent 0%, transparent 90%, #ff843d 90%, #ff843d 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: 0 100%;
+  transition: background-size 300ms ease, background-position 300ms ease;
+}
+.breadcrumb ul li a:hover {
+  background-size: 100% 100%;
 }
 .breadcrumb li:not(:last-child)::after {
   display: inline-block;
