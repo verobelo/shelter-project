@@ -118,6 +118,9 @@
     gap: 0.3125rem;
     margin-bottom: 1rem;
     font-size: map-get($font-sizes, "small");
+    & span {
+      font-size: map-get($font-sizes, "small");
+    }
   }
   &__description {
     font-size: map-get($font-sizes, "medium");
