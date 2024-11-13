@@ -119,7 +119,7 @@
     margin-bottom: 1rem;
     font-size: map-get($font-sizes, "small");
     & span {
-      font-size: map-get($font-sizes, "small");
+      font-size: map-get($font-sizes, "medium");
     }
   }
   &__description {
