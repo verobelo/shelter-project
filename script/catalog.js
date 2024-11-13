@@ -18,7 +18,6 @@ function fetchPetData(petType) {
       "Content-Type": "application/json",
     },
     mode: "no-cors",
-    credentials: "same-origin",
   })
     .then((response) => response.json())
     .then((data) => {
