@@ -12,7 +12,7 @@ const applyFiltersButton = document.getElementById("apply-filters");
 
 // Fetch the data based on the type of pet
 function fetchPetData(petType) {
-  fetch(`http://185.242.107.36:8080/api/pets/${petType}`)
+  fetch(`https://185.242.107.36:8080/api/pets/${petType}`)
     .then((response) => response.json())
     .then((data) => {
       fetchedData = data;
