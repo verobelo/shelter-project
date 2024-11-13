@@ -17,7 +17,7 @@ function fetchPetData(petType) {
     headers: {
       "Content-Type": "application/json",
     },
-    mode: "cors",
+    mode: "no-cors",
     credentials: "same-origin",
   })
     .then((response) => response.json())
