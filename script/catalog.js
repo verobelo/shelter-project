@@ -160,7 +160,7 @@ function displayCards(page, data = fetchedData) {
             </button>
           </div>          
           <div class="catalog__gender">
-            <span>${genderSymbol}</span><p>${pet.gender}</p>
+            <span><p>${genderSymbol}</p></span><p>${pet.gender}</p>
           </div>
           <div class="catalog__description">
             <p>${pet.description}</p>
