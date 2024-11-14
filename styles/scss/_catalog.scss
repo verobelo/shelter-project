@@ -117,8 +117,11 @@
     @include flex(row, flex-start, center);
     gap: 0.3125rem;
     margin-bottom: 1rem;
-    font-weight: map-get($font-weights, "bold");
-    font-size: map-get($font-sizes, "medium");
+    & span {
+      & p {
+        font-size: 3rem;
+      }
+    }
   }
   &__description {
     font-size: map-get($font-sizes, "medium");

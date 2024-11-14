@@ -1327,8 +1327,9 @@ li[aria-current=page] {
   flex-direction: row;
   gap: 0.3125rem;
   margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.25rem;
+}
+.catalog__gender span p {
+  font-size: 3rem;
 }
 .catalog__description {
   font-size: 1.25rem;
