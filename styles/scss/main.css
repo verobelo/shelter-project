@@ -1263,8 +1263,23 @@ li[aria-current=page] {
   grid-column: 1/2;
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 70vh;
   padding-top: 1rem;
+  overflow-y: auto;
+}
+.catalog__filters::-webkit-scrollbar {
+  width: 10px;
+}
+.catalog__filters::-webkit-scrollbar-track {
+  background: #ffe8da;
+  border-radius: 10px;
+}
+.catalog__filters::-webkit-scrollbar-thumb {
+  background: #ffcaac;
+  border-radius: 10px;
+}
+.catalog__filters::-webkit-scrollbar-thumb:hover {
+  background: #ffa979;
 }
 .catalog__card-group {
   grid-column: 2/3;

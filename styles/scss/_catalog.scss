@@ -64,8 +64,23 @@
     grid-column: 1 / 2;
     position: sticky;
     top: 0;
-    height: 100vh;
+    height: 70vh;
     padding-top: 1rem;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: map-get($colors, "form-primary");
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: map-get($colors, "form-secondary");
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: darken(map-get($colors, "form-secondary"), 10%);
+    }
   }
 
   &__card-group {
