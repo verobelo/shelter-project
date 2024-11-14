@@ -129,6 +129,8 @@ function displayCards(page, data = fetchedData) {
     const genderSymbol = pet.gender === "Мужской" ? "&#9794;" : "&#9792;";
     const petDetails = `${pet.id}-details.html`;
 
+    console.log(pet.gender);
+
     const card = `
       <div class="catalog__card">
         <div class="catalog__img">
