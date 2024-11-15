@@ -46,7 +46,7 @@ a {
 
 @font-face {
   font-family: "Cruinn";
-  src: url("/assets/fonts/Cruinn-Medium.woff2") format("woff2"), url("/assets/fonts/Cruinn-Medium.woff") format("woff");
+  src: url("/shelter-project-frontend/assets/fonts/Cruinn-Medium.woff2") format("woff2"), url("/shelter-project-frontend/assets/fonts/Cruinn-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
