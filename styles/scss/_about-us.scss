@@ -163,3 +163,7 @@
     object-fit: cover;
   }
 }
+
+a[href="#"] {
+  background-color: map-get($colors, "form-primary");
+}

@@ -234,10 +234,6 @@ li[aria-current=page] {
   color: #ffffff;
 }
 
-li[aria-current=location] {
-  background-color: #ffe8da;
-}
-
 .footer__container {
   display: flex;
   align-items: center;
@@ -678,6 +674,10 @@ li[aria-current=location] {
   height: calc(100% - 4.625rem);
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+a[href="#"] {
+  background-color: #ffe8da;
 }
 
 .checklist__container {

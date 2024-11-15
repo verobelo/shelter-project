@@ -102,7 +102,3 @@
 .button {
   @include button-color;
 }
-
-li[aria-current="location"] {
-  background-color: map-get($colors, "form-primary");
-}
