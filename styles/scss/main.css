@@ -234,7 +234,7 @@ li[aria-current=page] {
   color: #ffffff;
 }
 
-li[aria-current=header] {
+li[aria-current=location] {
   background-color: #ffe8da;
 }
 
