@@ -234,6 +234,10 @@ li[aria-current=page] {
   color: #ffffff;
 }
 
+li[aria-current=page] {
+  background-color: #ffe8da;
+}
+
 .footer__container {
   display: flex;
   align-items: center;
