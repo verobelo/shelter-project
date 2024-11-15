@@ -103,6 +103,6 @@
   @include button-color;
 }
 
-li[aria-current="page"] {
+li[aria-current="header"] {
   background-color: map-get($colors, "form-primary");
 }
