@@ -130,3 +130,6 @@
 .active {
   color: map-get($colors, "primary");
 }
+.happy-current {
+  background-color: map-get($colors, "form-primary");
+}

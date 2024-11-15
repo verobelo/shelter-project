@@ -1018,6 +1018,10 @@ li[aria-current=page] {
   color: #ff843d;
 }
 
+.happy-current {
+  background-color: #ffe8da;
+}
+
 .story__container {
   border-top: 2px solid #ff843d;
   border-bottom: 2px solid #ff843d;
