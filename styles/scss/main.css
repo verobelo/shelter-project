@@ -677,6 +677,8 @@ li[aria-current=page] {
 }
 
 .about-current {
+  border-radius: 1rem;
+  padding: 0.4rem;
   background-color: #ffe8da;
 }
 
@@ -890,6 +892,8 @@ li[aria-current=page] {
 }
 
 .news-current {
+  border-radius: 1rem;
+  padding: 0.4rem;
   background-color: #ffe8da;
 }
 
@@ -1019,6 +1023,8 @@ li[aria-current=page] {
 }
 
 .happy-current {
+  border-radius: 1rem;
+  padding: 0.4rem;
   background-color: #ffe8da;
 }
 
@@ -1565,6 +1571,8 @@ li[aria-current=page] {
 }
 
 .dogs-current {
+  border-radius: 1rem;
+  padding: 0.4rem;
   background-color: #ffe8da;
 }
 

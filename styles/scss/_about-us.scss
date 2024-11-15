@@ -165,5 +165,7 @@
 }
 
 .about-current {
+  border-radius: 1rem;
+  padding: 0.4rem;
   background-color: map-get($colors, "form-primary");
 }
