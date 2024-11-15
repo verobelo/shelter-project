@@ -676,7 +676,7 @@ li[aria-current=page] {
      object-fit: cover;
 }
 
-a[href="#"] {
+.about-current {
   background-color: #ffe8da;
 }
 
@@ -887,6 +887,10 @@ a[href="#"] {
 
 .active {
   color: #ff843d;
+}
+
+.news-current {
+  background-color: #ffe8da;
 }
 
 .happy-stories__container {
@@ -1550,6 +1554,14 @@ a[href="#"] {
   box-shadow: none;
   background-color: #ff843d;
   color: #ffffff;
+}
+
+.cats-current {
+  background-color: #ffe8da;
+}
+
+.dogs-current {
+  background-color: #ffe8da;
 }
 
 .infosheet__container {

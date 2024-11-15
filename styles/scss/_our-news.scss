@@ -129,3 +129,7 @@
 .active {
   color: map-get($colors, "primary");
 }
+
+.news-current {
+  background-color: map-get($colors, "form-primary");
+}

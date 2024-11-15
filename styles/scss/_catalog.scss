@@ -336,3 +336,11 @@
 .apply-filters {
   @include button-color;
 }
+
+.cats-current {
+  background-color: map-get($colors, "form-primary");
+}
+
+.dogs-current {
+  background-color: map-get($colors, "form-primary");
+}
