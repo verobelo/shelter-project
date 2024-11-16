@@ -1437,7 +1437,7 @@ li[aria-current=page] {
   transform: rotate(90deg);
 }
 .catalog__filter-name::after {
-  content: url(/shelter-project-frontend/assets/images/cat-catalog/catalog-filter-hevron.svg);
+  content: url(../../assets/images/cat-catalog/catalog-filter-hevron.svg);
   transition: transform 0.2s ease;
 }
 .catalog__filter-options li {
