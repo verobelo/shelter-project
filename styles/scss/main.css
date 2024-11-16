@@ -1567,6 +1567,8 @@ li[aria-current=page] {
 }
 
 .cats-current {
+  border-radius: 1rem;
+  padding: 0.4rem;
   background-color: #ffe8da;
 }
 
