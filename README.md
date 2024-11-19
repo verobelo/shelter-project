@@ -1,5 +1,7 @@
 **_MVP FOR AN ANIMAL SHELTER WEBAPP_**
 
+The code is on the Develop branch due to the website still being developed.
+
 This project forms part of my intership in [Pineapple Practice](https://pnpl.site/) as a Frontend Developer.
 -----------------------------------------------------
 
